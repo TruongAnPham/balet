@@ -1,0 +1,16 @@
+{
+  "name": "Whisper of Motion",
+  "short_name": "Whisper",
+  "description": "Pre-Collection Textile, Silhouettes and Cut Development by Lina Nguen",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#CFA6A8",
+  "icons": [
+    {
+      "src": "/assets/svg/touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

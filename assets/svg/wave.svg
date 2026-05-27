@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none">
+  <path d="M 0 80 Q 180 20, 360 60 T 720 40 T 1080 70 T 1440 30 L 1440 120 L 0 120 Z"
+    fill="var(--color-bg, #FFFFFF)" opacity="0.95"/>
+  <path d="M 0 90 Q 200 40, 400 70 T 800 50 T 1200 75 T 1440 45 L 1440 120 L 0 120 Z"
+    fill="var(--color-bg, #FFFFFF)"/>
+</svg>

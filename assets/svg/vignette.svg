@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" preserveAspectRatio="none">
+  <defs>
+    <radialGradient id="vignette-grad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="60%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.35)"/>
+    </radialGradient>
+  </defs>
+  <rect width="1440" height="900" fill="url(#vignette-grad)"/>
+</svg>

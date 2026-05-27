@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 / Whisper of Motion</title>
+  <meta name="description" content="Page not found — Whisper of Motion by Lina Nguen.">
+  <meta name="robots" content="noindex">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Cormorant+SC:wght@300&family=DM+Sans:wght@300;400&family=Space+Mono:wght@400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Cormorant+SC:wght@300&family=DM+Sans:wght@300;400&family=Space+Mono:wght@400&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Cormorant+SC:wght@300&family=DM+Sans:wght@300;400&family=Space+Mono:wght@400&display=swap"></noscript>
+
+  <link rel="stylesheet" href="/styles/variables.css">
+  <link rel="stylesheet" href="/styles/base.css">
+  <link rel="stylesheet" href="/styles/layout.css">
+  <link rel="stylesheet" href="/styles/components.css">
+  <link rel="stylesheet" href="/styles/animations.css">
+  <link rel="stylesheet" href="/styles/utilities.css">
+  <script>document.documentElement.classList.remove('no-js');</script>
+</head>
+<body>
+
+  <svg class="grain-overlay" aria-hidden="true"><filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#grain)"/></svg>
+
+  <!-- Navbar -->
+  <nav class="navbar liquid-glass--opaque" aria-label="Main navigation">
+    <a href="index.html" class="navbar-logo" data-bloom>Whisper<sup class="logo-reg">&reg;</sup></a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link" data-bloom>Home</a>
+      <a href="process.html" class="nav-link" data-bloom>Process</a>
+      <a href="collection.html" class="nav-link" data-bloom>Collection</a>
+    </div>
+  </nav>
+
+  <div class="page-container">
+    <section class="error-section">
+      <!-- Background image -->
+      <div class="hero-video-wrap">
+        <div class="media-container" style="width:100%;height:100%;">
+          <img
+            src="https://i.ibb.co/VpWnBfdS/BHSAD-24042026131036.webp"
+            srcset="
+               800w,
+               1200w"
+            sizes="100vw"
+            alt="Close-up of hand-woven textile"
+            style="width:100%;height:100%;object-fit:cover;opacity:0.3;"
+            decoding="async">
+        </div>
+        <img class="hero-vignette" src="/assets/svg/vignette.svg" alt="" aria-hidden="true">
+      </div>
+
+      <!-- 404 Watermark -->
+      <span class="error-watermark" aria-hidden="true">404</span>
+
+      <!-- Content -->
+      <p class="error-message animate-fade-rise">
+        <em>The page you&rsquo;re looking for has left the stage.</em>
+      </p>
+
+      <a href="index.html" class="cta-btn liquid-glass cta-btn--dark animate-fade-rise--delay-1" data-bloom>
+        Return to Home
+      </a>
+    </section>
+  </div>
+
+  <!-- Mobile pill nav -->
+  <nav class="mobile-nav-pill liquid-glass" aria-label="Mobile navigation">
+    <a href="index.html" class="pill-link" data-bloom>Home</a>
+    <span class="pill-divider" aria-hidden="true">&middot;</span>
+    <a href="process.html" class="pill-link" data-bloom>Process</a>
+    <span class="pill-divider" aria-hidden="true">&middot;</span>
+    <a href="collection.html" class="pill-link" data-bloom>Collection</a>
+  </nav>
+
+  <script src="/js/init.js"></script>
+  <script src="/js/transitions.js"></script>
+  <noscript><style>[data-animate]{opacity:1!important;transform:none!important}</style></noscript>
+</body>
+</html>

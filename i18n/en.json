@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "home": "Home",
+    "process": "Process",
+    "collection": "Collection"
+  },
+  "hero": {
+    "tagline": ["discipline.", "motion.", "form."],
+    "subtitle": "A pre-collection study in discipline, material, and form.",
+    "cta": "View Collection",
+    "scroll": "SCROLL"
+  },
+  "about": {
+    "tagline": ["textile.", "silhouette.", "strength."],
+    "credit": "Pre-Collection Textile, Silhouettes and Cut Development",
+    "programme": "BA Fashion & Textile, Level 4 — Lina Nguen"
+  },
+  "process": {
+    "tagline": ["research.", "material.", "becoming."]
+  },
+  "collection": {
+    "tagline": ["whisper.", "structure.", "grace."],
+    "subtitle": "Whisper of Motion — Pre-Collection 2025"
+  },
+  "closing": {
+    "text": "Strength that has learned to speak quietly.",
+    "tagline": ["lina nguen.", "2025."]
+  },
+  "error": {
+    "message": "The page you're looking for has left the stage.",
+    "cta": "Return to Home"
+  },
+  "footer": {
+    "copyright": "© 2025 Whisper of Motion. Lina Nguen. All rights reserved."
+  },
+  "loading": {
+    "title": "WHISPER OF MOTION",
+    "subtitle": "BA Fashion & Textile — Lina Nguen"
+  },
+  "marquee": "WHISPER OF MOTION — LINA NGUEN — BA FASHION & TEXTILE — 2025 —"
+}

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whisper of Motion</title>
+  <meta name="description" content="Whisper of Motion - Pre-Collection by Lina Nguen. BA Fashion and Textile, Level 4.">
+  <meta property="og:title" content="Whisper of Motion">
+  <meta property="og:description" content="Pre-Collection Textile, Silhouettes and Cut Development.">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://whisper-of-motion.vercel.app">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Whisper of Motion">
+  <link rel="apple-touch-icon" href="/assets/svg/touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Cormorant+SC:wght@300&family=DM+Sans:wght@300;400&family=Space+Mono:wght@400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Cormorant+SC:wght@300&family=DM+Sans:wght@300;400&family=Space+Mono:wght@400&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Cormorant+SC:wght@300&family=DM+Sans:wght@300;400&family=Space+Mono:wght@400&display=swap"></noscript>
+  <link rel="stylesheet" href="/styles/variables.css">
+  <link rel="stylesheet" href="/styles/base.css">
+  <link rel="stylesheet" href="/styles/layout.css">
+  <link rel="stylesheet" href="/styles/components.css">
+  <link rel="stylesheet" href="/styles/animations.css">
+  <link rel="stylesheet" href="/styles/utilities.css">
+  <script>document.documentElement.classList.remove('no-js');</script>
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loading-screen" aria-hidden="true">
+    <div class="loader-lines">
+      <div class="loader-line" data-line="1">whisper</div>
+      <div class="loader-line" data-line="2">of</div>
+      <div class="loader-line" data-line="3">motion</div>
+      <div class="loader-line" data-line="4">Lina Nguen &#8212; 2025</div>
+    </div>
+    <div class="loader-glow" aria-hidden="true"></div>
+  </div>
+
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <svg class="grain-overlay" aria-hidden="true"><filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#grain)"/></svg>
+  <div class="custom-cursor" aria-hidden="true"><div class="cursor-dot"><span class="cursor-label">VIEW</span></div></div>
+  <div class="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Image lightbox">
+    <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+    <button class="lightbox-nav lightbox-nav--prev" aria-label="Previous image">&#8592;</button>
+    <img class="lightbox-image" src="" alt="">
+    <button class="lightbox-nav lightbox-nav--next" aria-label="Next image">&#8594;</button>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar liquid-glass--opaque" aria-label="Main navigation">
+    <a href="index.html" class="navbar-logo" data-bloom>Whisper<sup class="logo-reg">&reg;</sup></a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link active" data-bloom>Home</a>
+      <a href="process.html" class="nav-link" data-bloom>Process</a>
+      <a href="collection.html" class="nav-link" data-bloom>Collection</a>
+    </div>
+  </nav>
+
+  <div class="page-container">
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-video-wrap">
+        <div class="video-container">
+          <div class="video-placeholder" aria-hidden="true"></div>
+          <video 
+  muted 
+  autoplay 
+  loop 
+  playsinline 
+  preload="metadata"
+  aria-label="Ballet rehearsal footage"
+>
+  <source 
+    src="https://17f7dyxcw8.ucarecd.net/be1cf80c-ccca-470c-9382-9ccdf4cbee96/05271.mp4" 
+    type="video/mp4"
+  >
+</video>
+        </div>
+        <img class="hero-vignette" src="/assets/svg/vignette.svg" alt="" aria-hidden="true">
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-heading animate-fade-rise">
+          <span class="heading-muted">Strength</span><br>
+          <span class="heading-primary">that speaks</span><br>
+          <span class="heading-accent">quietly.</span>
+        </h1>
+        <p class="editorial-tagline animate-fade-rise--delay-1" style="margin-top: 0.75rem;">
+          <span>discipline.</span>
+          <span>motion.</span>
+          <span>form.</span>
+        </p>
+        <p class="hero-subtitle animate-fade-rise--delay-2" style="font-family:var(--font-body);font-size:var(--text-body);color:rgba(255,255,255,0.7);margin-top:1rem;">
+          A pre-collection study in discipline, material, and form.
+        </p>
+        <a href="collection.html" class="cta-btn animate-fade-rise--delay-2" data-bloom style="margin-top:1.5rem;">
+          View Collection
+        </a>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-line"></div>
+        <span class="scroll-label">SCROLL</span>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section relative" id="about">
+      <div class="container">
+        <blockquote class="pull-quote text-center mb-lg" data-animate>
+          <em>&ldquo;Ballet presents itself as light, graceful, and seemingly effortless &mdash; yet is sustained by extraordinary physical rigor and emotional endurance.&rdquo;</em>
+        </blockquote>
+        <div class="split">
+          <div>
+            <h2 class="section-heading" data-gsap-reveal>
+              <span class="heading-line">WHISPER</span>
+              <span class="heading-line heading-accent">OF MOTION</span>
+            </h2>
+            <p class="editorial-tagline editorial-tagline--dark mt-sm" data-animate>
+              <span>textile.</span>
+              <span>silhouette.</span>
+              <span>strength.</span>
+            </p>
+            <p class="project-credit mt-sm" data-animate>
+              Pre-Collection Textile, Silhouettes and Cut Development<br>
+              BA Fashion &amp; Textile, Level 4 &mdash; Lina Nguen
+            </p>
+          </div>
+          <div>
+            <blockquote class="pull-quote" data-animate style="font-size:clamp(1.2rem,2.5vw,2.4rem);">
+              <em>&ldquo;What appears soft in ballet is never empty of force. It is strength that has learned to speak quietly.&rdquo;</em>
+            </blockquote>
+            <p data-animate style="margin-top:1.5rem;color:var(--color-muted);line-height:1.8;">
+              This collection explores the coexistence of vulnerability and resilience. Through material contrast &mdash; tulle against metal, softness against structure &mdash; the disciplined body becomes a site of expressive potential.
+            </p>
+          </div>
+        </div>
+        <div class="decorative-word" data-animate="decorative" style="top:10%;right:-5%;" aria-hidden="true">STRENGTH</div>
+      </div>
+    </section>
+
+    <!-- DESIGNER -->
+    <section class="section" id="designer">
+      <div class="container">
+        <div class="designer-section">
+          <div class="media-container" data-animate="clip-h">
+            <img class="designer-photo" src="https://i.ibb.co/C5r6ZBR2/BHSAD-24042026130776.webp" alt="Lina Nguen, fashion designer" loading="lazy" decoding="async">
+          </div>
+          <div>
+            <h3 class="designer-name" data-animate>LINA NGUEN</h3>
+            <p class="editorial-tagline editorial-tagline--dark" data-animate>
+              <span>designer.</span>
+              <span>ba fashion &amp; textile.</span>
+            </p>
+            <p class="designer-quote" data-animate>
+              <em>&ldquo;I came to ballet not through training, but through images &mdash; and found in it a language for everything I wanted to say through cloth.&rdquo;</em>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MANIFESTO -->
+    <section class="manifesto-section" id="manifesto">
+      <p class="manifesto-text" data-illuminate>
+        <span class="word">Dance</span> <span class="word">is</span>
+        <span class="word">the</span> <span class="word">hidden</span>
+        <span class="word">language</span> <span class="word">of</span>
+        <span class="word">the</span> <span class="word">soul</span>
+        <span class="word">&mdash;</span> <span class="word">strength</span>
+        <span class="word">expressed</span> <span class="word">not</span>
+        <span class="word">through</span> <span class="word">force,</span>
+        <span class="word">but</span> <span class="word">through</span>
+        <span class="word">the</span> <span class="word">capacity</span>
+        <span class="word">to</span> <span class="word">hold</span>
+        <span class="word">form.</span>
+      </p>
+      <p class="manifesto-attribution" data-animate>&mdash; Whispers of Strength, 2025</p>
+    </section>
+
+    <!-- RESEARCH CARDS -->
+    <section class="section" id="research">
+      <div class="container">
+        <div class="grid grid--3">
+          <div class="card liquid-glass--opaque" data-tilt data-bloom data-animate="card">
+            <div class="media-container">
+              <img class="card__image" src="https://i.ibb.co/9KgJcpQ/BHSAD-24042026130726.webp" alt="The Beginning" loading="lazy" decoding="async" data-lightbox="">
+            </div>
+            <div class="card__content">
+              <span class="card__number">I. THE BEGINNING</span>
+              <p class="card__caption"><em>&ldquo;Nervousness, excitement, trembling anticipation&rdquo;</em></p>
+            </div>
+          </div>
+          <div class="card liquid-glass--opaque" data-tilt data-bloom data-animate="card" style="transition-delay:150ms;">
+            <div class="media-container">
+              <img class="card__image" src="https://i.ibb.co/gM7848Tg/BHSAD-24042026132472.webp" alt="The Struggles" loading="lazy" decoding="async" data-lightbox="">
+            </div>
+            <div class="card__content">
+              <span class="card__number">II. THE STRUGGLES</span>
+              <p class="card__caption"><em>&ldquo;The pain of transition &mdash; from one dance style to another&rdquo;</em></p>
+            </div>
+          </div>
+          <div class="card liquid-glass--opaque" data-tilt data-bloom data-animate="card" style="transition-delay:300ms;">
+            <div class="media-container">
+              <img class="card__image" src="https://i.ibb.co/n25cJ0z/BHSAD-24042026131538.webp" alt="The Dream" loading="lazy" decoding="async" data-lightbox="">
+            </div>
+            <div class="card__content">
+              <span class="card__number">III. THE DREAM</span>
+              <p class="card__caption"><em>&ldquo;The entry into a new world, where joy intertwines with uncertainty&rdquo;</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>WHISPER OF MOTION &mdash; LINA NGUEN &mdash; BA FASHION &amp; TEXTILE &mdash; 2025 &mdash; </span>
+        <span aria-hidden="true">WHISPER OF MOTION &mdash; LINA NGUEN &mdash; BA FASHION &amp; TEXTILE &mdash; 2025 &mdash; </span>
+      </div>
+    </div>
+
+    <!-- TEASER VISUALS -->
+    <section class="section" id="teaser-visuals">
+      <div class="container">
+        <div class="editorial-asymmetric">
+          <div class="media-container teaser-img-wrap">
+            <img src="https://i.ibb.co/WvVhKHf4/BHSAD-24042026130652.webp" alt="Textile texture moodboard" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/5;object-fit:cover;" data-lightbox="">
+          </div>
+          <div class="media-container teaser-img-wrap" style="animation-delay:0.2s;">
+            <img src="https://i.ibb.co/67S8nTWV/BHSAD-24042026132177.webp" alt="Silhouette development board" loading="lazy" decoding="async" style="width:100%;aspect-ratio:1/1;object-fit:cover;" data-lightbox="">
+          </div>
+          <div class="media-container teaser-img-wrap" style="animation-delay:0.4s;">
+            <img src="https://i.ibb.co/YF8P6rG0/BHSAD-24042026131387.webp" alt="Atelier studio photograph" loading="lazy" decoding="async" style="width:100%;aspect-ratio:3/4;object-fit:cover;" data-lightbox="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NAV TEASE -->
+    <section class="section" id="nav-tease">
+      <div class="container">
+        <div class="nav-tease-grid">
+          <a href="process.html" class="nav-tease-block" data-bloom data-animate="tease">
+            <div class="nav-tease-img media-container">
+              <img src="https://i.ibb.co/TDBBMzMv/3.webp" alt="Process page" loading="lazy" decoding="async">
+            </div>
+            <h3 class="nav-tease-label">PROCESS</h3>
+            <p class="nav-tease-sub">Research. Materials. Development.</p>
+            <span class="nav-tease-cta cta-btn">Explore</span>
+          </a>
+          <a href="collection.html" class="nav-tease-block" data-bloom data-animate="tease" style="transition-delay:150ms;">
+            <div class="nav-tease-img media-container">
+              <img src="https://i.ibb.co/LX7BBYVX/BHSAD-24042026131159.webp" alt="Collection page" loading="lazy" decoding="async">
+            </div>
+            <h3 class="nav-tease-label">COLLECTION</h3>
+            <p class="nav-tease-sub">Textile. Silhouette. Form.</p>
+            <span class="nav-tease-cta cta-btn">Explore</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-watermark" aria-hidden="true">WHISPER OF MOTION</div>
+      <div class="footer-signature">
+        <svg viewBox="0 0 120 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M 12 8 L 12 38 Q 12 40 14 40 L 32 40 M 62 38 L 62 8 L 90 38 L 90 8"/><circle cx="48" cy="24" r="2" fill="currentColor" stroke="none"/>
+        </svg>
+      </div>
+      <div class="footer-contact" data-animate="footer">
+        <a href="mailto:YOUR_EMAIL" class="footer-link" data-bloom>your@email.com</a>
+        <a href="mailto:YOUR_GENERAL_EMAIL" class="footer-link" data-bloom>general@email.com</a>
+        <a href="https://instagram.com/HANDLE" class="footer-link" data-bloom target="_blank" rel="noopener">@yourhandle</a>
+      </div>
+      <hr class="footer-divider">
+      <p class="footer-copyright">&copy; 2025 Whisper of Motion. Lina Nguen. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- Mobile pill nav -->
+  <nav class="mobile-nav-pill liquid-glass" aria-label="Mobile navigation">
+    <a href="index.html" class="pill-link active" data-bloom>Home</a>
+    <span class="pill-divider" aria-hidden="true">&middot;</span>
+    <a href="process.html" class="pill-link" data-bloom>Process</a>
+    <span class="pill-divider" aria-hidden="true">&middot;</span>
+    <a href="collection.html" class="pill-link" data-bloom>Collection</a>
+  </nav>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="/js/init.js"></script>
+  <script src="/js/animations.js"></script>
+  <script src="/js/transitions.js"></script>
+  <script src="/js/cursor.js"></script>
+  <script src="/js/media-loader.js"></script>
+  <script src="/js/lightbox.js"></script>
+  <script src="/js/marquee.js"></script>
+  <script src="/js/tilt.js"></script>
+  <script src="/js/scroll-text.js"></script>
+  <script src="/js/xray.js"></script>
+  <script src="/js/gsap-init.js"></script>
+  <noscript><style>.loading-screen{display:none!important}[data-animate]{opacity:1!important;transform:none!important}</style></noscript>
+</body>
+</html>

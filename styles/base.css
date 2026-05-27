@@ -1,0 +1,227 @@
+/* ============================================================
+   BASE.CSS — Reset, Defaults, Accessibility Overrides
+   Whisper of Motion — Lina Nguen
+   ============================================================ */
+
+/* --- Modern CSS Reset --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+  scrollbar-gutter: stable;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: var(--text-body);
+  line-height: 1.65;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  overflow-x: hidden;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* --- Scrollbar (Webkit) --- */
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* --- Base elements --- */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+blockquote {
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* --- Selection --- */
+::selection {
+  background: rgba(207, 166, 168, 0.25);
+  color: var(--color-text);
+}
+
+/* --- Tap highlight removal (iOS) --- */
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* --- Touch-action defaults --- */
+body {
+  touch-action: pan-y;
+}
+
+/* --- Focus Visible --- */
+:focus {
+  outline: none;
+}
+:focus-visible {
+  outline: 1.5px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* --- Theme transition (non-layout properties only) --- */
+body,
+.navbar,
+.card,
+.footer,
+.mobile-nav-pill,
+.loading-screen,
+.manifesto-section,
+.scroll-progress,
+.section-heading,
+.pull-quote,
+.editorial-tagline,
+.designer-name,
+.footer-watermark,
+.footer-link,
+.marquee__track,
+.decorative-word {
+  transition:
+    color 400ms ease,
+    background-color 400ms ease,
+    border-color 400ms ease;
+}
+.no-theme-transition,
+.no-theme-transition *,
+.no-theme-transition *::before,
+.no-theme-transition *::after {
+  transition: none !important;
+}
+
+/* --- No-JS fallbacks --- */
+.no-js .loading-screen {
+  display: none;
+}
+.no-js [data-animate] {
+  opacity: 1;
+  transform: none;
+}
+.no-js .liquid-glass {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.no-js .mobile-nav-pill {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* --- Noscript inline --- */
+noscript .loading-screen {
+  display: none !important;
+}
+
+/* --- Reduced Motion --- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --- High Contrast --- */
+@media (prefers-contrast: high) {
+  .liquid-glass,
+  .liquid-glass--opaque,
+  .navbar,
+  .mobile-nav-pill,
+  .card,
+  .lightbox {
+    background: var(--color-bg) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: 2px solid var(--color-text) !important;
+  }
+  .caption,
+  .micro-label,
+  .footer-link {
+    opacity: 1 !important;
+  }
+  .decorative-word,
+  .watermark-logotype,
+  .grain-overlay {
+    display: none !important;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-text) !important;
+    outline-offset: 2px !important;
+  }
+}
+
+/* --- Forced Colors (Windows High Contrast) --- */
+@media (forced-colors: active) {
+  .liquid-glass,
+  .navbar,
+  .card,
+  .mobile-nav-pill {
+    background: Canvas;
+    border: 1px solid ButtonText;
+    forced-color-adjust: none;
+  }
+  img,
+  video {
+    forced-color-adjust: none;
+  }
+}
+
+/* --- Pull-to-refresh prevention during transitions --- */
+body.is-transitioning {
+  overscroll-behavior: none;
+}
