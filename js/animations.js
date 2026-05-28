@@ -6,52 +6,6 @@
 (function () {
   'use strict';
 
-  // --- animateWithWillChange helper ---
-  function animateWithWillChange(el, animateFn) {
-    el.style.willChange = 'transform, opacity';
-    animateFn();
-    el.addEventListener(
-      'transitionend',
-      () => {
-        el.style.willChange = 'auto';
-      },
-      { once: true }
-    );
-  }
-
-  // --- Animation queue (max concurrent = 4) ---
-  const animationQueue = [];
-  let activeAnimations = 0;
-  const MAX_CONCURRENT = 4;
-
-  function enqueue(el) {
-    animationQueue.push(el);
-    processQueue();
-  }
-
-  function processQueue() {
-    while (activeAnimations < MAX_CONCURRENT && animationQueue.length > 0) {
-      const el = animationQueue.shift();
-      activeAnimations++;
-      animateWithWillChange(el, () => el.classList.add('animate-in'));
-      el.addEventListener(
-        'transitionend',
-        () => {
-          activeAnimations--;
-          processQueue();
-        },
-        { once: true }
-      );
-      // Safety: if transitionend never fires (e.g. reduced-motion), auto-decrement
-      setTimeout(() => {
-        if (el.classList.contains('animate-in')) {
-          activeAnimations = Math.max(0, activeAnimations - 1);
-          processQueue();
-        }
-      }, 1500);
-    }
-  }
-
   // --- IntersectionObserver for [data-animate] ---
   function setupObserver() {
     const observer = new IntersectionObserver(
@@ -59,10 +13,13 @@
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
           observer.unobserve(entry.target);
-          enqueue(entry.target);
+          // Directly add animate-in — no queue, no transitionend dependency
+          requestAnimationFrame(() => {
+            entry.target.classList.add('animate-in');
+          });
         });
       },
-      { threshold: 0.15, rootMargin: '0px 0px -60px 0px' }
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
     );
 
     document.querySelectorAll('[data-animate]').forEach((el) => {

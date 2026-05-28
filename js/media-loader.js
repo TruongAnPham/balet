@@ -36,6 +36,17 @@
     // --- Video activation ---
     activateVideos();
 
+    // --- Video load detection ---
+    document.querySelectorAll('.video-container video').forEach((video) => {
+      video.addEventListener('canplay', () => {
+        video.closest('.video-container')?.classList.add('loaded');
+      });
+      // If already ready
+      if (video.readyState >= 3) {
+        video.closest('.video-container')?.classList.add('loaded');
+      }
+    });
+
     // --- Error detection ---
     document.querySelectorAll('.media-container img').forEach((img) => {
       img.addEventListener('error', () => {
@@ -48,6 +59,14 @@
         }
       });
     });
+
+    // --- Safety fallback: reveal ALL animated elements after 4 seconds ---
+    // This ensures images are NEVER permanently hidden
+    setTimeout(() => {
+      document.querySelectorAll('[data-animate]:not(.animate-in)').forEach((el) => {
+        el.classList.add('animate-in');
+      });
+    }, 4000);
 
     // --- Low bandwidth: skip video autoplay ---
     if (window.WOM?.isLowEnd) {

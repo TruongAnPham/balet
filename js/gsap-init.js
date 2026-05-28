@@ -59,6 +59,9 @@
     const timelinePanels = document.querySelector('.timeline-panels');
 
     if (timelineSection && timelinePanels && window.innerWidth >= 768) {
+      // Ensure timeline panels are visible
+      timelinePanels.style.display = 'flex';
+      
       gsap.to(timelinePanels, {
         x: () =>
           -(timelinePanels.scrollWidth - window.innerWidth),
@@ -67,7 +70,8 @@
           trigger: timelineSection,
           pin: true,
           scrub: 1,
-          end: () => '+=' + timelinePanels.scrollWidth,
+          start: 'top 5%',
+          end: () => '+=' + (timelinePanels.scrollWidth + window.innerHeight * 0.3),
           invalidateOnRefresh: true,
         },
       });
