@@ -1,314 +1,479 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Whisper of Motion</title>
-  <meta name="description" content="Whisper of Motion - Pre-Collection by Lina Nguen. BA Fashion and Textile, Level 4.">
-  <meta property="og:title" content="Whisper of Motion">
-  <meta property="og:description" content="Pre-Collection Textile, Silhouettes and Cut Development.">
-  <meta property="og:image" content="">
+  <title>Whisper of Motion — Lina Nguen</title>
+  <meta name="description" content="Whisper of Motion — A fashion collection exploring the contrast between ballet and metal by Lina Nguen. BA Fashion & Textile, Spring/Summer 2026.">
+  <meta property="og:title" content="Whisper of Motion — Lina Nguen">
+  <meta property="og:description" content="A fashion collection exploring the contrast between ballet and metal. Spring/Summer 2026.">
   <meta property="og:type" content="website">
   <link rel="canonical" href="https://whisper-of-motion.vercel.app">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="Whisper of Motion">
-  <link rel="apple-touch-icon" href="/assets/svg/touch-icon.png">
-  <link rel="manifest" href="/manifest.json">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Cormorant+SC:wght@300&family=DM+Sans:wght@300;400&family=Space+Mono:wght@400&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Cormorant+SC:wght@300&family=DM+Sans:wght@300;400&family=Space+Mono:wght@400&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Cormorant+SC:wght@300&family=DM+Sans:wght@300;400&family=Space+Mono:wght@400&display=swap"></noscript>
-  <link rel="stylesheet" href="/styles/variables.css">
-  <link rel="stylesheet" href="/styles/base.css">
-  <link rel="stylesheet" href="/styles/layout.css">
-  <link rel="stylesheet" href="/styles/components.css">
-  <link rel="stylesheet" href="/styles/animations.css">
-  <link rel="stylesheet" href="/styles/utilities.css">
-  <script>document.documentElement.classList.remove('no-js');</script>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400&display=swap"></noscript>
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
 
-  <!-- Loading Screen -->
-  <div class="loading-screen" aria-hidden="true">
-    <div class="loader-lines">
-      <div class="loader-line" data-line="1">whisper</div>
-      <div class="loader-line" data-line="2">of</div>
-      <div class="loader-line" data-line="3">motion</div>
-      <div class="loader-line" data-line="4">Lina Nguen &#8212; 2025</div>
+  <!-- ====== NAVBAR ====== -->
+  <nav class="navbar" aria-label="Main navigation">
+    <a href="#hero" class="navbar-logo">Whisper of Motion</a>
+    <div class="nav-links-desktop">
+      <a href="#concept">Concept</a>
+      <a href="process.html">Process</a>
+      <a href="collection.html">Collection</a>
     </div>
-    <div class="loader-glow" aria-hidden="true"></div>
+    <button class="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="cnav-overlay" id="mobileNavOverlay">
+    <a href="#concept">Concept</a>
+    <a href="process.html">Process</a>
+    <a href="collection.html">Collection</a>
   </div>
 
-  <div class="scroll-progress" aria-hidden="true"></div>
-  <svg class="grain-overlay" aria-hidden="true"><filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#grain)"/></svg>
-  <div class="custom-cursor" aria-hidden="true"><div class="cursor-dot"><span class="cursor-label">VIEW</span></div></div>
-  <div class="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Image lightbox">
-    <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
-    <button class="lightbox-nav lightbox-nav--prev" aria-label="Previous image">&#8592;</button>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  HERO                                      -->
+  <!-- ══════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <img
+      src="https://17f7dyxcw8.ucarecd.net/9fe573c9-9936-4f9f-b1eb-00da736d3cae/BHSAD_24042026131159.webp"
+      alt="Whisper of Motion — ballet and metal fashion collection"
+      fetchpriority="high" decoding="async">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-kicker">Lina Nguen — BA Fashion &amp; Textile</p>
+      <h1 class="hero-title">
+        <span class="hero-title-line">Whisper</span>
+        <span class="hero-title-line hero-title-line--accent">of Motion</span>
+      </h1>
+      <p class="hero-season">Spring / Summer 2026</p>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  CONCEPT                                    -->
+  <!-- ══════════════════════════════════════════ -->
+
+  <!-- Concept Intro — Full-width dramatic -->
+  <section class="section section--concept-intro" id="concept">
+    <div class="container">
+      <div class="concept-intro">
+        <div class="concept-intro__text">
+          <span class="label fade-in">The Concept</span>
+          <h2 class="title-expressive fade-in">
+            <span class="title-line">Ballet</span>
+            <span class="title-line title-line--italic">meets</span>
+            <span class="title-line">Metal</span>
+          </h2>
+          <div class="accent-line fade-in"></div>
+          <p class="concept-lead fade-in">This collection explores the contrast between ballet and metal — two opposite worlds united within a single image. A story about <em>fragility</em> and <em>inner strength</em>, inspired by the discipline, endurance, and resilience hidden behind the graceful appearance of a ballerina.</p>
+          <p class="fade-in">Metal symbolizes the inner core — strength, resilience, and emotional armor hidden beneath an outwardly soft appearance. Through the combination of soft silhouettes, flowing shapes, and metallic textures, I aimed to create a balance between tenderness and hardness, vulnerability and power.</p>
+        </div>
+        <div class="concept-intro__image fade-in">
+          <div class="media-frame media-frame--elegant">
+            <img
+              src="https://17f7dyxcw8.ucarecd.net/85f1618e-65a2-4751-80c8-04119cb15840/photo_20260528_083417.jpg"
+              alt="Lina Nguen, fashion designer"
+              loading="lazy" decoding="async">
+            <div class="media-frame__caption">Lina Nguen</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Section Divider -->
+  <div class="section-divider">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,30 Q300,0 600,30 T1200,30" stroke="currentColor" stroke-width="1" fill="none" opacity="0.15"/></svg>
+  </div>
+
+
+  <!-- Inspiration — Cinematic quote -->
+  <section class="section section--dark section--inspiration">
+    <div class="container">
+      <div class="inspiration-block">
+        <span class="label fade-in">Inspiration</span>
+        <div class="big-quote fade-in">
+          <blockquote>
+            "I came to ballet not through training, but through images — and found in it a language for everything I wanted to say through cloth."
+          </blockquote>
+        </div>
+        <p class="inspiration-text fade-in">The initial inspiration came from observing ballerinas and their ability to maintain beauty and poise despite pain, pressure, and constant self-discipline. Another important influence was the <em>Sexy Robot</em> exhibition by Hajime Sorayama in Shanghai, which introduced a futuristic and metallic aesthetic that inspired combining the vulnerability of the human body with the cold, rigid qualities of metal.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  INTERVIEW — Editorial Showcase             -->
+  <!-- ══════════════════════════════════════════ -->
+  <section class="section section--interview">
+    <div class="container">
+      <div class="interview-header fade-in">
+        <span class="label">Interview</span>
+        <h2 class="title-expressive">
+          <span class="title-line">A Conversation</span>
+          <span class="title-line title-line--italic">with a Ballerina</span>
+        </h2>
+        <div class="accent-line accent-line--center"></div>
+      </div>
+
+      <div class="interview-editorial">
+        <div class="interview-block fade-in">
+          <div class="interview-number">01</div>
+          <div class="interview-content">
+            <p class="interview-q">What emotions did you feel when you first stepped onto the stage?</p>
+            <p class="interview-a">"At first, there was overwhelming nervousness, almost fear — but then it quickly turned into <em>euphoria</em>."</p>
+          </div>
+        </div>
+
+        <div class="interview-block fade-in">
+          <div class="interview-number">02</div>
+          <div class="interview-content">
+            <p class="interview-q">What was the most difficult thing about practicing ballet?</p>
+            <p class="interview-a">"Overcoming physical pain and mental pressure. Every practice had to be <em>perfect</em>, no mistakes allowed. But when you stand on stage, everything is worth it."</p>
+          </div>
+        </div>
+
+        <div class="interview-block fade-in">
+          <div class="interview-number">03</div>
+          <div class="interview-content">
+            <p class="interview-q">How did ballet change you as a person?</p>
+            <p class="interview-a">"It taught me discipline and perseverance. Even when your body hurts, you still have to smile and <em>soar</em>. That is quiet strength."</p>
+          </div>
+        </div>
+
+        <div class="interview-block fade-in">
+          <div class="interview-number">04</div>
+          <div class="interview-content">
+            <p class="interview-q">If you had the chance, would you return to ballet?</p>
+            <p class="interview-a">"Yes, I would — but not professionally, because I chose a different career path: becoming a <em>prosecutor</em>."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Section Divider -->
+  <div class="section-divider">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,30 Q300,60 600,30 T1200,30" stroke="currentColor" stroke-width="1" fill="none" opacity="0.15"/></svg>
+  </div>
+
+
+  <!-- Written Evaluation -->
+  <section class="section section--surface section--reflection">
+    <div class="container">
+      <div class="reflection-layout">
+        <div class="reflection-side fade-in">
+          <span class="label">Reflection</span>
+          <h2 class="title-expressive title-expressive--sm">
+            <span class="title-line">Written</span>
+            <span class="title-line title-line--italic">Evaluation</span>
+          </h2>
+          <div class="accent-line"></div>
+        </div>
+        <div class="reflection-body fade-in">
+          <p class="reflection-lead">Working on this project, I learned a lot about myself as a designer. Researching ballerinas and understanding how much discipline, pain, and physical strength exist behind their graceful appearance changed my perspective on femininity — <em>softness does not equal weakness</em>. This idea became the core of my collection.</p>
+          <p>Visiting Hajime Sorayama's <em>Sexy Robot</em> exhibition gave me more confidence to try unexpected combinations and push my ideas further. Overall, this project helped me become more confident in my creative identity, showing me how to express emotion and meaning through fashion — not just visually, but through concept, material, and detail.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  PROCESS                                    -->
+  <!-- ══════════════════════════════════════════ -->
+  <section class="section" id="process">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="label">Process</span>
+        <h2 class="title-expressive">
+          <span class="title-line">Research</span>
+          <span class="title-line title-line--italic">&amp; Development</span>
+        </h2>
+        <div class="accent-line accent-line--center"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research: Ballet Schools -->
+  <section class="section section--surface" style="padding-top:0;">
+    <div class="container">
+      <div class="split split--wide">
+        <div class="fade-in">
+          <span class="label">Research</span>
+          <h3 class="subtitle-elegant">Ballet Schools</h3>
+          <p>Studying different ballet schools, their behind-the-scenes life, training processes, and historic institutions to expand sources of inspiration and gain a deeper understanding of the topic.</p>
+        </div>
+        <div class="fade-in">
+          <div class="media-frame media-frame--hover-zoom" style="aspect-ratio: 4/5;">
+            <img data-src="https://17f7dyxcw8.ucarecd.net/890a7720-17f5-4cbf-b69e-384069a089f0/first.webp"
+              alt="Ballet school research moodboard" loading="lazy" decoding="async" data-lightbox>
+            <div class="media-frame__hover-hint">
+              <span>View</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research: Movement -->
+  <section class="section">
+    <div class="container">
+      <div class="split split--wide-r">
+        <div class="fade-in">
+          <div class="media-frame media-frame--hover-zoom" style="aspect-ratio: 4/5;">
+            <img data-src="https://17f7dyxcw8.ucarecd.net/4eee5a2a-04d4-42c5-af2c-65a97717b707/second.webp"
+              alt="Ballet movement research" loading="lazy" decoding="async" data-lightbox>
+            <div class="media-frame__hover-hint">
+              <span>View</span>
+            </div>
+          </div>
+        </div>
+        <div class="fade-in">
+          <span class="label">Research</span>
+          <h3 class="subtitle-elegant">Movement &amp; Technique</h3>
+          <p>Exploring the grace and movement of ballerinas — the way they move in dance and the correct positioning of their feet during performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Materials -->
+  <section class="section section--surface">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="label">Research</span>
+        <h2 class="title-expressive title-expressive--sm">
+          <span class="title-line title-line--italic">Texture & Silhouette & Fabrics</span>
+        </h2>
+        <div class="accent-line accent-line--center"></div>
+      </div>
+
+      <div class="narrow text-center fade-in" style="margin-bottom: 2.5rem;">
+        <p class="concept-lead">Tulle for voluminous skirts, linen, delicate silk, and hand-woven tweed with a yarn composition of wool and viscose — materials chosen for their balance of <em>fragility</em> and <em>strength</em>.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card fade-in">
+          <div class="card__image-wrap">
+            <img data-src="https://17f7dyxcw8.ucarecd.net/ec213459-0f53-4d5b-910d-c898667e0f3a/process.webp"
+              alt="Tulle and organza samples" loading="lazy" decoding="async" data-lightbox>
+            <div class="card__hover-overlay">
+              <span>View Detail</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>Texture</h3>
+            <p>Gives a sense of lightness when viewed</p>
+          </div>
+        </div>
+        <div class="card fade-in">
+          <div class="card__image-wrap">
+            <img data-src="https://17f7dyxcw8.ucarecd.net/cce37302-cd61-4639-8be4-7ee625f5db79/SILHOUE.webp"
+              alt="Hand-woven textile" loading="lazy" decoding="async" data-lightbox>
+            <div class="card__hover-overlay">
+              <span>View Detail</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>Silhouette</h3>
+            <p>Express lightness and a sense of fragility in the girls</p>
+          </div>
+        </div>
+        <div class="card fade-in">
+          <div class="card__image-wrap">
+            <img data-src="https://17f7dyxcw8.ucarecd.net/eed3da77-bbe8-481b-b024-330c30ad81c4/fabrics.webp"
+              alt="Lace samples" loading="lazy" decoding="async" data-lightbox>
+            <div class="card__hover-overlay">
+              <span>View Detail</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>Fabrics</h3>
+            <p>I prefer more delicate fabrics.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Sketches -->
+  <section class="section section--blush">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="label">Design</span>
+        <h2 class="title-expressive title-expressive--sm">
+          <span class="title-line title-line--italic">Diffusion Line Range Plan</span>
+        </h2>
+        <div class="accent-line accent-line--center"></div>
+      </div>
+      <div class="grid-3">
+        <div class="media-frame media-frame--hover-zoom fade-in" style="aspect-ratio: 4/5;">
+          <img data-src="https://17f7dyxcw8.ucarecd.net/13740d10-c2d9-40ec-a6af-c0c7e51b2251/diffusion1.webp"
+            alt="Design sketches" loading="lazy" decoding="async" data-lightbox>
+          <div class="media-frame__hover-hint"><span>View</span></div>
+        </div>
+        <div class="media-frame media-frame--hover-zoom fade-in" style="aspect-ratio: 4/5;">
+          <img data-src="https://17f7dyxcw8.ucarecd.net/8ba9ac91-b057-40f6-9fc6-338cc4d8df60/diffusion2.webp"
+            alt="Material studies" loading="lazy" decoding="async" data-lightbox>
+          <div class="media-frame__hover-hint"><span>View</span></div>
+        </div>
+        <div class="media-frame media-frame--hover-zoom fade-in" style="aspect-ratio: 4/5;">
+          <img data-src="https://17f7dyxcw8.ucarecd.net/1557f12c-22f3-4e1c-9d9c-843eab76608c/diffusion3.webp"
+            alt="Construction illustration" loading="lazy" decoding="async" data-lightbox>
+          <div class="media-frame__hover-hint"><span>View</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  COLLECTION                                 -->
+  <!-- ══════════════════════════════════════════ -->
+
+  <!-- Section Divider -->
+  <div class="section-divider section-divider--dark">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,30 Q300,0 600,30 T1200,30" stroke="currentColor" stroke-width="1" fill="none" opacity="0.15"/></svg>
+  </div>
+
+  <section class="section section--dark" id="collection">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="label">2026 Collection</span>
+        <h2 class="title-expressive title-expressive--light">
+          <span class="title-line">Technical</span>
+          <span class="title-line title-line--italic">Specification</span>
+        </h2>
+        <div class="accent-line accent-line--center"></div>
+      </div>
+
+      <!-- Collection Boards -->
+      <div class="gallery-grid">
+        <div class="gallery-item fade-in">
+          <img data-src="https://17f7dyxcw8.ucarecd.net/16f5c600-ec54-441b-8d8e-3c90e1c9cda7/look1.webp"
+            alt="Board 1 — The Beginning" loading="lazy" decoding="async" data-lightbox>
+          <div class="gallery-item__overlay"><span>The Beginning</span></div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img data-src="https://17f7dyxcw8.ucarecd.net/356f4c0f-6f66-4065-a162-bfc30b371aaf/look2.webp"
+            alt="Board 2 — The Struggles" loading="lazy" decoding="async" data-lightbox>
+          <div class="gallery-item__overlay"><span>The Struggles</span></div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img data-src="https://17f7dyxcw8.ucarecd.net/c8593798-7ef7-4a68-abfc-d9b3a29c3794/look3.webp"
+            alt="Board 3 — The Dream" loading="lazy" decoding="async" data-lightbox>
+          <div class="gallery-item__overlay"><span>The Dream</span></div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img data-src="https://17f7dyxcw8.ucarecd.net/92bfb538-f065-4053-85bc-4e9416206499/look4.webp"
+            alt="Board 4" loading="lazy" decoding="async" data-lightbox>
+          <div class="gallery-item__overlay"><span>Explore</span></div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img data-src="https://17f7dyxcw8.ucarecd.net/a7fda96e-0a27-4a9e-84b5-153deeb471bb/look5.webp"
+            alt="Board 5" loading="lazy" decoding="async" data-lightbox>
+          <div class="gallery-item__overlay"><span>Explore</span></div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img data-src="https://17f7dyxcw8.ucarecd.net/47fa3cb7-f385-4ea8-9c5a-5c7048a7a47e/look6.webp"
+            alt="Board 6" loading="lazy" decoding="async" data-lightbox>
+          <div class="gallery-item__overlay"><span>Explore</span></div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img data-src="https://17f7dyxcw8.ucarecd.net/7ba0c85f-25b3-4d0c-bfc6-74fbf9957a92/look7.webp"
+            alt="Board 7" loading="lazy" decoding="async" data-lightbox>
+          <div class="gallery-item__overlay"><span>Explore</span></div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img data-src="https://17f7dyxcw8.ucarecd.net/4e1357a6-4479-46e5-83ba-3494b57379b4/look8.webp"
+            alt="Board 8" loading="lazy" decoding="async" data-lightbox>
+          <div class="gallery-item__overlay"><span>Explore</span></div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img data-src="https://17f7dyxcw8.ucarecd.net/fa566401-9e98-41bf-9410-56a501bff71c/look9.webp"
+            alt="Board 9" loading="lazy" decoding="async" data-lightbox>
+          <div class="gallery-item__overlay"><span>Explore</span></div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img data-src="https://17f7dyxcw8.ucarecd.net/222c9604-5546-4dba-a999-fc96748be867/look10.webp"
+            alt="Board 10" loading="lazy" decoding="async" data-lightbox>
+          <div class="gallery-item__overlay"><span>Explore</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Final Statement -->
+  <section class="section section--dark section--finale">
+    <div class="container">
+      <div class="finale-block fade-in">
+        <div class="big-quote">
+          <blockquote>
+            "Through the combination of soft silhouettes, flowing shapes, and metallic textures, I aimed to create a balance between tenderness and hardness, vulnerability and power."
+          </blockquote>
+        </div>
+        <div class="accent-line accent-line--center"></div>
+        <p class="finale-attribution">Lina Nguen — <em>Whisper of Motion</em></p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="footer-watermark" aria-hidden="true">Motion</div>
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-brand">Whisper of Motion</p>
+        <p class="footer-tagline">Strength that has learned to speak quietly.</p>
+        <div class="footer-links">
+          <a href="mailto:linanguen61@gmail.com">linanguen61@gmail.com</a>
+          <a href="https://www.instagram.com/oohlingg_?igsh=dzk5c3o1bGo2cThj" target="_blank" rel="noopener">@oohlingg_</a>
+          <a href="tel:+79775497689">+7 (977) 549-76-89</a>
+        </div>
+        <p class="footer-copy">&copy; 20256 Lina Nguen. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Lightbox -->
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <button class="lightbox-nav lightbox-nav--prev" aria-label="Previous">&#8592;</button>
     <img class="lightbox-image" src="" alt="">
-    <button class="lightbox-nav lightbox-nav--next" aria-label="Next image">&#8594;</button>
+    <button class="lightbox-nav lightbox-nav--next" aria-label="Next">&#8594;</button>
   </div>
 
-  <!-- Navbar -->
-  <nav class="navbar liquid-glass--opaque" aria-label="Main navigation">
-    <a href="index.html" class="navbar-logo" data-bloom>Whisper<sup class="logo-reg">&reg;</sup></a>
-    <div class="nav-links">
-      <a href="index.html" class="nav-link active" data-bloom>Home</a>
-      <a href="process.html" class="nav-link" data-bloom>Process</a>
-      <a href="collection.html" class="nav-link" data-bloom>Collection</a>
-    </div>
-  </nav>
-
-  <div class="page-container">
-
-    <!-- HERO -->
-    <section class="hero" id="hero">
-      <div class="hero-video-wrap">
-        <div class="video-container">
-          <div class="video-placeholder" aria-hidden="true"></div>
-          <video 
-  muted 
-  autoplay 
-  loop 
-  playsinline 
-  preload="metadata"
-  aria-label="Ballet rehearsal footage"
->
-  <source 
-    src="https://17f7dyxcw8.ucarecd.net/be1cf80c-ccca-470c-9382-9ccdf4cbee96/05271.mp4" 
-    type="video/mp4"
-  >
-</video>
-        </div>
-        <img class="hero-vignette" src="/assets/svg/vignette.svg" alt="" aria-hidden="true">
-      </div>
-      <div class="hero-content">
-        <h1 class="hero-heading animate-fade-rise">
-          <span class="heading-muted">Strength</span><br>
-          <span class="heading-primary">that speaks</span><br>
-          <span class="heading-accent">quietly.</span>
-        </h1>
-        <p class="editorial-tagline animate-fade-rise--delay-1" style="margin-top: 0.75rem;">
-          <span>discipline.</span>
-          <span>motion.</span>
-          <span>form.</span>
-        </p>
-        <p class="hero-subtitle animate-fade-rise--delay-2" style="font-family:var(--font-body);font-size:var(--text-body);color:rgba(255,255,255,0.7);margin-top:1rem;">
-          A pre-collection study in discipline, material, and form.
-        </p>
-        <a href="collection.html" class="cta-btn animate-fade-rise--delay-2" data-bloom style="margin-top:1.5rem;">
-          View Collection
-        </a>
-      </div>
-      <div class="scroll-indicator" aria-hidden="true">
-        <div class="scroll-line"></div>
-        <span class="scroll-label">SCROLL</span>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="section relative" id="about">
-      <div class="container">
-        <blockquote class="pull-quote text-center mb-lg" data-animate>
-          <em>&ldquo;Ballet presents itself as light, graceful, and seemingly effortless &mdash; yet is sustained by extraordinary physical rigor and emotional endurance.&rdquo;</em>
-        </blockquote>
-        <div class="split">
-          <div>
-            <h2 class="section-heading" data-gsap-reveal>
-              <span class="heading-line">WHISPER</span>
-              <span class="heading-line heading-accent">OF MOTION</span>
-            </h2>
-            <p class="editorial-tagline editorial-tagline--dark mt-sm" data-animate>
-              <span>textile.</span>
-              <span>silhouette.</span>
-              <span>strength.</span>
-            </p>
-            <p class="project-credit mt-sm" data-animate>
-              Pre-Collection Textile, Silhouettes and Cut Development<br>
-              BA Fashion &amp; Textile, Level 4 &mdash; Lina Nguen
-            </p>
-          </div>
-          <div>
-            <blockquote class="pull-quote" data-animate style="font-size:clamp(1.2rem,2.5vw,2.4rem);">
-              <em>&ldquo;What appears soft in ballet is never empty of force. It is strength that has learned to speak quietly.&rdquo;</em>
-            </blockquote>
-            <p data-animate style="margin-top:1.5rem;color:var(--color-muted);line-height:1.8;">
-              This collection explores the coexistence of vulnerability and resilience. Through material contrast &mdash; tulle against metal, softness against structure &mdash; the disciplined body becomes a site of expressive potential.
-            </p>
-          </div>
-        </div>
-        <div class="decorative-word" data-animate="decorative" style="top:10%;right:-5%;" aria-hidden="true">STRENGTH</div>
-      </div>
-    </section>
-
-    <!-- DESIGNER -->
-    <section class="section" id="designer">
-      <div class="container">
-        <div class="designer-section">
-          <div class="media-container" data-animate="clip-h">
-            <img class="designer-photo" src="https://17f7dyxcw8.ucarecd.net/85f1618e-65a2-4751-80c8-04119cb15840/photo_20260528_083417.jpg" alt="Lina Nguen, fashion designer" loading="lazy" decoding="async">
-          </div>
-          <div>
-            <h3 class="designer-name" data-animate>LINA NGUEN</h3>
-            <p class="editorial-tagline editorial-tagline--dark" data-animate>
-              <span>designer.</span>
-              <span>ba fashion &amp; textile.</span>
-            </p>
-            <p class="designer-quote" data-animate>
-              <em>&ldquo;I came to ballet not through training, but through images &mdash; and found in it a language for everything I wanted to say through cloth.&rdquo;</em>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MANIFESTO -->
-    <section class="manifesto-section" id="manifesto">
-      <p class="manifesto-text" data-illuminate>
-        <span class="word">Dance</span> <span class="word">is</span>
-        <span class="word">the</span> <span class="word">hidden</span>
-        <span class="word">language</span> <span class="word">of</span>
-        <span class="word">the</span> <span class="word">soul</span>
-        <span class="word">&mdash;</span> <span class="word">strength</span>
-        <span class="word">expressed</span> <span class="word">not</span>
-        <span class="word">through</span> <span class="word">force,</span>
-        <span class="word">but</span> <span class="word">through</span>
-        <span class="word">the</span> <span class="word">capacity</span>
-        <span class="word">to</span> <span class="word">hold</span>
-        <span class="word">form.</span>
-      </p>
-      <p class="manifesto-attribution" data-animate>&mdash; Whispers of Strength, 2025</p>
-    </section>
-
-    <!-- RESEARCH CARDS -->
-    <section class="section" id="research">
-      <div class="container">
-        <div class="grid grid--3">
-          <div class="card liquid-glass--opaque" data-tilt data-bloom data-animate="card">
-            <div class="media-container">
-              <img class="card__image" src="https://17f7dyxcw8.ucarecd.net/f13a356c-c95d-4009-9638-e25eaae0db7e/thebeggining.webp" alt="The Beginning" loading="lazy" decoding="async" data-lightbox="">
-            </div>
-            <div class="card__content">
-              <span class="card__number">I. THE BEGINNING</span>
-              <p class="card__caption"><em>&ldquo;Nervousness, excitement, trembling anticipation&rdquo;</em></p>
-            </div>
-          </div>
-          <div class="card liquid-glass--opaque" data-tilt data-bloom data-animate="card" style="transition-delay:150ms;">
-            <div class="media-container">
-              <img class="card__image" src="https://17f7dyxcw8.ucarecd.net/efb322a1-3aa8-4df1-a53c-06a59d0c35c3/thestruggle.webp" alt="The Struggles" loading="lazy" decoding="async" data-lightbox="">
-            </div>
-            <div class="card__content">
-              <span class="card__number">II. THE STRUGGLES</span>
-              <p class="card__caption"><em>&ldquo;The pain of transition &mdash; from one dance style to another&rdquo;</em></p>
-            </div>
-          </div>
-          <div class="card liquid-glass--opaque" data-tilt data-bloom data-animate="card" style="transition-delay:300ms;">
-            <div class="media-container">
-              <img class="card__image" src="https://17f7dyxcw8.ucarecd.net/3ec70eaa-72c7-4bc9-b9bd-8d511a5af14c/blockk3.webp" alt="The Dream" loading="lazy" decoding="async" data-lightbox="">
-            </div>
-            <div class="card__content">
-              <span class="card__number">III. THE DREAM</span>
-              <p class="card__caption"><em>&ldquo;The entry into a new world, where joy intertwines with uncertainty&rdquo;</em></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MARQUEE -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee__track">
-        <span>WHISPER OF MOTION &mdash; LINA NGUEN &mdash; BA FASHION &amp; TEXTILE &mdash; 2025 &mdash; </span>
-        <span aria-hidden="true">WHISPER OF MOTION &mdash; LINA NGUEN &mdash; BA FASHION &amp; TEXTILE &mdash; 2025 &mdash; </span>
-      </div>
-    </div>
-
-    <!-- TEASER VISUALS -->
-    <section class="section" id="teaser-visuals">
-      <div class="container">
-        <div class="editorial-asymmetric">
-          <div class="media-container teaser-img-wrap">
-            <img src="https://17f7dyxcw8.ucarecd.net/584ce02d-6bd6-46b0-9777-d7850f30c677/BHSAD_24042026130652.webp" alt="Textile texture moodboard" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/5;object-fit:cover;" data-lightbox="">
-          </div>
-          <div class="media-container teaser-img-wrap" style="animation-delay:0.2s;">
-            <img src="https://17f7dyxcw8.ucarecd.net/7bd9a069-c68d-4dd3-b96b-957bda70fac6/BHSAD_24042026132177.webp" alt="Silhouette development board" loading="lazy" decoding="async" style="width:100%;aspect-ratio:1/1;object-fit:cover;" data-lightbox="">
-          </div>
-          <div class="media-container teaser-img-wrap" style="animation-delay:0.4s;">
-            <img src="https://17f7dyxcw8.ucarecd.net/729aeec1-bde9-4883-b80f-9f472e383f20/BHSAD_24042026131387.webp" alt="Atelier studio photograph" loading="lazy" decoding="async" style="width:100%;aspect-ratio:3/4;object-fit:cover;" data-lightbox="">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- NAV TEASE -->
-    <section class="section" id="nav-tease">
-      <div class="container">
-        <div class="nav-tease-grid">
-          <a href="process.html" class="nav-tease-block" data-bloom data-animate="tease">
-            <div class="nav-tease-img media-container">
-              <img src="https://17f7dyxcw8.ucarecd.net/355e68ab-f4e3-4c66-b943-8902efb0bcd5/3.webp" alt="Process page" loading="lazy" decoding="async">
-            </div>
-            <h3 class="nav-tease-label">PROCESS</h3>
-            <p class="nav-tease-sub">Research. Materials. Development.</p>
-            <span class="nav-tease-cta cta-btn">Explore</span>
-          </a>
-          <a href="collection.html" class="nav-tease-block" data-bloom data-animate="tease" style="transition-delay:150ms;">
-            <div class="nav-tease-img media-container">
-              <img src="https://17f7dyxcw8.ucarecd.net/662efd1d-9f38-4f30-9b54-2b25469194d1/BHSAD_24042026130659.webp" alt="Collection page" loading="lazy" decoding="async">
-            </div>
-            <h3 class="nav-tease-label">COLLECTION</h3>
-            <p class="nav-tease-sub">Textile. Silhouette. Form.</p>
-            <span class="nav-tease-cta cta-btn">Explore</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-watermark" aria-hidden="true">WHISPER OF MOTION</div>
-      <div class="footer-signature">
-        <svg viewBox="0 0 120 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M 12 8 L 12 38 Q 12 40 14 40 L 32 40 M 62 38 L 62 8 L 90 38 L 90 8"/><circle cx="48" cy="24" r="2" fill="currentColor" stroke="none"/>
-        </svg>
-      </div>
-      <div class="footer-contact" data-animate="footer">
-        <a href="" class="footer-link" data-bloom>linanguen61@gmail.com</a>
-        <a href="https://www.instagram.com/oohlingg_?igsh=dzk5c3o1bGo2cThj" class="footer-link" data-bloom>@oohlingg_</a>
-        <a href="" class="footer-link" data-bloom target="_blank" rel="noopener">+7(977)549-76-89</a>
-      </div>
-      <hr class="footer-divider">
-      <p class="footer-copyright">&copy; 2025 Whisper of Motion. Lina Nguen. All rights reserved.</p>
-    </footer>
-
-  </div>
-
-  <!-- Mobile pill nav -->
-  <nav class="mobile-nav-pill liquid-glass" aria-label="Mobile navigation">
-    <a href="index.html" class="pill-link active" data-bloom>Home</a>
-    <span class="pill-divider" aria-hidden="true">&middot;</span>
-    <a href="process.html" class="pill-link" data-bloom>Process</a>
-    <span class="pill-divider" aria-hidden="true">&middot;</span>
-    <a href="collection.html" class="pill-link" data-bloom>Collection</a>
-  </nav>
-
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="/js/init.js"></script>
-  <script src="/js/animations.js"></script>
-  <script src="/js/transitions.js"></script>
-  <script src="/js/cursor.js"></script>
-  <script src="/js/media-loader.js"></script>
-  <script src="/js/lightbox.js"></script>
-  <script src="/js/marquee.js"></script>
-  <script src="/js/tilt.js"></script>
-  <script src="/js/scroll-text.js"></script>
-  <script src="/js/xray.js"></script>
-  <script src="/js/gsap-init.js"></script>
-  <noscript><style>.loading-screen{display:none!important}[data-animate]{opacity:1!important;transform:none!important}</style></noscript>
+  <script src="js/main.js">
+  </script>
 </body>
 </html>

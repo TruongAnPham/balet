@@ -1,115 +1,58 @@
-/* ============================================================
-   VARIABLES.CSS — Design Tokens
-   Whisper of Motion — Lina Nguen
-   ============================================================ */
+/* ============================================
+   WHISPER OF MOTION — Design Tokens
+   Dusty-pink / mauve palette — Ballet-inspired
+   ============================================ */
 
-/* --- Fallback font-faces with size-adjust (prevents CLS) --- */
-@font-face {
-  font-family: 'Cormorant Fallback';
-  src: local('Georgia');
-  size-adjust: 92%;
-  ascent-override: 92%;
-  descent-override: 24%;
-  line-gap-override: 0%;
-}
-@font-face {
-  font-family: 'DM Sans Fallback';
-  src: local('Helvetica Neue'), local('Arial');
-  size-adjust: 105%;
-  ascent-override: 96%;
-  descent-override: 22%;
-  line-gap-override: 0%;
-}
-@font-face {
-  font-family: 'Space Mono Fallback';
-  src: local('Courier New');
-  size-adjust: 98%;
-}
-
-/* --- Root design tokens --- */
 :root {
-  /* ---- Color Palette ---- */
-  --color-dusty-pink:  #CFA6A8;
-  --color-chill-mauve:  #A79BA8;
-  --color-silver:       #B9BFC3;
-  --color-dark-silver:  #2E2E32;
-  --color-white:        #FFFFFF;
-  --color-warm-white:   #F5F3F2;
-  --color-off-white:    #F7F3F0;
+  /* ---- Original Color Palette ---- */
+  --color-dusty-pink: #CFA6A8;
+  --color-chill-mauve: #A79BA8;
+  --color-silver: #B9BFC3;
+  --color-dark-silver: #2E2E32;
+  --color-warm-white: #F5F3F2;
+  --color-off-white: #F7F3F0;
 
-  /* ---- Semantic colors (light mode default) ---- */
-  --color-bg:           var(--color-white);
-  --color-text:         var(--color-dark-silver);
-  --color-accent:       var(--color-dusty-pink);
-  --color-accent-mid:   var(--color-chill-mauve);
-  --color-border:       var(--color-silver);
-  --color-muted:        rgba(46, 46, 50, 0.5);
+  /* ---- Semantic Colors ---- */
+  --color-bg: #FFFFFF;
+  --color-text: #2E2E32;
+  --color-text-secondary: #6B6368;
+  --color-accent: #CFA6A8;
+  --color-accent-hover: #B8868A;
+  --color-accent-light: rgba(207, 166, 168, 0.10);
+  --color-accent-muted: rgba(207, 166, 168, 0.25);
+  --color-surface: #F7F3F0;
+  --color-surface-alt: #FAF7F5;
+  --color-border: #E8E0DC;
+  --color-border-light: #F0EBE8;
+  --color-hero-overlay-start: rgba(46, 46, 50, 0.7);
+  --color-hero-overlay-end: rgba(46, 46, 50, 0.05);
 
-  /* ---- Transition overlay ---- */
-  --color-transition-bg: var(--color-off-white);
+  /* ---- Fonts ---- */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Space Mono', 'Courier New', monospace;
 
-  /* ---- Font Stacks ---- */
-  --font-display: 'Cormorant Garamond', 'Cormorant Fallback', Georgia, serif;
-  --font-sub:     'Cormorant SC', 'Cormorant Fallback', Georgia, serif;
-  --font-body:    'DM Sans', 'DM Sans Fallback', 'Helvetica Neue', Arial, sans-serif;
-  --font-mono:    'Space Mono', 'Space Mono Fallback', 'Courier New', monospace;
+  /* ---- Spacing ---- */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 3rem;
+  --space-xl: 5rem;
+  --space-section: clamp(3rem, 6vw, 5rem);
 
-  /* ---- Fluid Type Scale (ratio 1.414) ---- */
-  --text-hero:    clamp(2.8rem, 8vw, 10rem);
-  --text-display: clamp(2rem, 5vw, 6.5rem);
-  --text-heading: clamp(1.5rem, 3vw, 3.5rem);
-  --text-subhead: clamp(1rem, 1.5vw, 1.4rem);
-  --text-body:    clamp(0.875rem, 1vw, 1.05rem);
-  --text-caption: clamp(0.7rem, 0.8vw, 0.85rem);
-  --text-micro:   clamp(0.6rem, 0.7vw, 0.75rem);
-
-  /* ---- Fluid Spacing Scale ---- */
-  --space-xs:  clamp(0.5rem, 1vw, 1rem);
-  --space-sm:  clamp(1rem, 2vw, 2rem);
-  --space-md:  clamp(2rem, 4vw, 4rem);
-  --space-lg:  clamp(2rem, 4vw, 4.5rem);
-  --space-xl:  clamp(3rem, 6vw, 6rem);
-  --space-2xl: clamp(5rem, 8vw, 10rem);
-
-  /* ---- Layout ---- */
-  --container-max: 1800px;
-  --container-padding: clamp(1.25rem, 4vw, 3rem);
-
-  /* ---- Easing Curves ---- */
-  --ease-micro:    cubic-bezier(0.22, 0.9, 0.32, 1);
-  --ease-cinematic: cubic-bezier(0.2, 0.0, 0.0, 1.0);
-  --ease-spring:   cubic-bezier(0.2, 0.0, 0.0, 1.0);
-
-  /* ---- Z-Index Scale ---- */
-  --z-base:       1;
-  --z-card:       5;
-  --z-sticky:     10;
-  --z-pill-nav:   50;
-  --z-navbar:     100;
-  --z-lightbox:   200;
-  --z-transition: 500;
-  --z-loading:    1000;
-  --z-cursor:     9999;
-
-  /* ---- Scrollbar ---- */
-  --scrollbar-width: 4px;
-  --scrollbar-thumb: var(--color-silver);
-  --scrollbar-thumb-hover: var(--color-dusty-pink);
-
-  /* ---- Border radii ---- */
-  --radius-sm:   4px;
-  --radius-md:   8px;
-  --radius-lg:   16px;
+  /* ---- Radius ---- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
   --radius-pill: 100px;
-}
 
-/* --- Dark mode semantic overrides --- */
-[data-theme="dark"] {
-  --color-bg:           var(--color-dark-silver);
-  --color-text:         var(--color-warm-white);
-  --color-accent:       var(--color-dusty-pink);
-  --color-accent-mid:   var(--color-chill-mauve);
-  --color-border:       rgba(185, 191, 195, 0.2);
-  --color-muted:        rgba(245, 243, 242, 0.5);
-  --color-transition-bg: #1A1A1C;
+  /* ---- Shadow ---- */
+  --shadow-card: 0 2px 20px rgba(167, 155, 168, 0.1);
+  --shadow-card-hover: 0 6px 32px rgba(167, 155, 168, 0.2);
+  --shadow-nav: 0 1px 8px rgba(46, 46, 50, 0.06);
+
+  /* ---- Transitions ---- */
+  --transition-fast: 200ms ease;
+  --transition-normal: 300ms ease;
+  --transition-smooth: 500ms cubic-bezier(0.22, 1, 0.36, 1);
 }

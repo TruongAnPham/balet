@@ -1,473 +1,306 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Process / Whisper of Motion</title>
-  <meta name="description" content="Process - Research, materials, and development behind Whisper of Motion by Lina Nguen.">
-  <meta property="og:title" content="Process / Whisper of Motion">
-  <meta property="og:description" content="Research, materials, and development behind the pre-collection.">
-  <meta property="og:image" content="">
+  <title>Process — Whisper of Motion</title>
+  <meta name="description" content="Design process documentation for Whisper of Motion by Lina Nguen. From material exploration to final outcome — tweed, metal, and textile construction.">
+  <meta property="og:title" content="Process — Whisper of Motion">
+  <meta property="og:description" content="Design process: material exploration, metal work, tweed construction, and range planning.">
   <meta property="og:type" content="website">
-  <link rel="canonical" href="https://whisper-of-motion.vercel.app/process.html">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="Whisper of Motion">
-  <link rel="apple-touch-icon" href="/assets/svg/touch-icon.png">
-  <link rel="manifest" href="/manifest.json">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Cormorant+SC:wght@300&family=DM+Sans:wght@300;400&family=Space+Mono:wght@400&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Cormorant+SC:wght@300&family=DM+Sans:wght@300;400&family=Space+Mono:wght@400&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Cormorant+SC:wght@300&family=DM+Sans:wght@300;400&family=Space+Mono:wght@400&display=swap"></noscript>
-  <link rel="stylesheet" href="/styles/variables.css">
-  <link rel="stylesheet" href="/styles/base.css">
-  <link rel="stylesheet" href="/styles/layout.css">
-  <link rel="stylesheet" href="/styles/components.css">
-  <link rel="stylesheet" href="/styles/animations.css">
-  <link rel="stylesheet" href="/styles/utilities.css">
-  <script>document.documentElement.classList.remove('no-js');</script>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400&display=swap"></noscript>
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/process.css">
 </head>
 <body>
 
-  <!-- Loading Screen -->
-  <div class="loading-screen" aria-hidden="true">
-    <div class="loader-lines">
-      <div class="loader-line" data-line="1">whisper</div>
-      <div class="loader-line" data-line="2">of</div>
-      <div class="loader-line" data-line="3">motion</div>
-      <div class="loader-line" data-line="4">Lina Nguen &#8212; 2025</div>
+  <!-- ====== NAVBAR ====== -->
+  <nav class="pnav" aria-label="Main navigation">
+    <a href="index.html" class="pnav__logo">Whisper of Motion</a>
+    <div class="pnav__links">
+      <a href="index.html#concept">Concept</a>
+      <a href="process.html" class="pnav__links--active">Process</a>
+      <a href="collection.html">Collection</a>
     </div>
-    <div class="loader-glow" aria-hidden="true"></div>
-  </div>
-
-  <div class="scroll-progress" aria-hidden="true"></div>
-  <svg class="grain-overlay" aria-hidden="true"><filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#grain)"/></svg>
-  <div class="custom-cursor" aria-hidden="true"><div class="cursor-dot"><span class="cursor-label">VIEW</span></div></div>
-  <div class="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Image lightbox">
-    <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
-    <button class="lightbox-nav lightbox-nav--prev" aria-label="Previous image">&#8592;</button>
-    <img class="lightbox-image" src="" alt="">
-    <button class="lightbox-nav lightbox-nav--next" aria-label="Next image">&#8594;</button>
-  </div>
-
-  <!-- Navbar -->
-  <nav class="navbar liquid-glass--opaque" aria-label="Main navigation">
-    <a href="index.html" class="navbar-logo" data-bloom>Whisper<sup class="logo-reg">&reg;</sup></a>
-    <div class="nav-links">
-      <a href="index.html" class="nav-link" data-bloom>Home</a>
-      <a href="process.html" class="nav-link active" data-bloom>Process</a>
-      <a href="collection.html" class="nav-link" data-bloom>Collection</a>
-    </div>
+    <button class="pnav__hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
-  <div class="page-container">
-
-    <!-- ===== SECTION 1 -- HERO ===== -->
-    <section class="hero hero--80" id="process-hero">
-      <div class="hero-video-wrap">
-        <div class="media-container" style="width:100%;height:100%;">
-          <img src="https://17f7dyxcw8.ucarecd.net/ec213459-0f53-4d5b-910d-c898667e0f3a/process.webp" alt="Close-up of hand-woven textile sample" style="width:100%;height:100%;object-fit:cover;" decoding="async">
-        </div>
-        <img class="hero-vignette" src="/assets/svg/vignette.svg" alt="" aria-hidden="true">
-      </div>
-      <div class="hero-content">
-        <h1 class="hero-heading animate-fade-rise">
-          <span class="heading-primary">PRO</span><span class="heading-accent">CESS</span>
-        </h1>
-        <p class="editorial-tagline animate-fade-rise--delay-1" style="margin-top: 0.75rem;">
-          <span>research.</span>
-          <span>material.</span>
-          <span>becoming.</span>
-        </p>
-      </div>
-    </section>
-
-    <!-- ===== SECTION 2 -- RESEARCH OVERVIEW ===== -->
-    <section class="section" id="research-overview">
-      <div class="container">
-        <div class="split">
-          <div data-animate>
-            <p style="font-family:var(--font-display);font-style:italic;font-size:var(--text-body);line-height:1.8;color:var(--color-text);">
-              &ldquo;My engagement with ballet began not through technical dance training, but through images, narratives, and representations. Archival photographs of classical ballet, rehearsal documentation, and contemporary media portrayals revealed a recurring contrast between the polished image of the ballerina and the intense discipline that underlies it.&rdquo;
-            </p>
-          </div>
-          <div data-animate style="transition-delay:200ms;">
-            <blockquote class="pull-quote">
-              <span class="heading-accent">&ldquo;99 out of 100.&rdquo;</span>
-            </blockquote>
-            <p class="pull-caption">Interview with former ballerina, Block 3</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- ===== SECTION 3 — INTERVIEW EXTRACT ===== -->
-    <section class="section" id="interviews">
-      <div class="container">
-        <h2 class="section-heading mb-lg" data-gsap-reveal>
-          <span class="heading-line">INTER</span>
-          <span class="heading-line heading-accent">VIEWS</span>
-        </h2>
-
-        <div class="interview-grid">
-          <!-- Block 1 — The Beginning -->
-          <div class="interview-block" data-animate>
-            <p class="interview-q">&ldquo;What age did you start studying ballet?&rdquo;</p>
-            <p class="interview-a">&ldquo;I was 14 when i first started&rdquo;</p>
-          </div>
-
-          <!-- Block 2 — The Struggles -->
-          <div class="interview-block" data-animate style="transition-delay:150ms;">
-            <p class="interview-q">&ldquo;Was the beginning difficult for you? If so, how did you cope with the challenges?&rdquo;</p>
-            <p class="interview-a">&ldquo;The transition from one style of dance to another was not easy. I tried to give my all during rehearsals and prove to some of my teachers that I, too, was capable of much.&rdquo;</p>
-          </div>
-
-          <!-- Block 3 — The Stage -->
-          <div class="interview-block" data-animate style="transition-delay:300ms;">
-            <p class="interview-q">&ldquo;What emotions did you feel when you first stepped onto the stage?&rdquo;</p>
-            <p class="interview-a">&ldquo;At first, there was overwhelming nervousness, almost fear — but then it quickly turned into euphoria.&rdquo;</p>
-          </div>
-
-          <!-- Block 4 — After Ballet -->
-          <div class="interview-block" data-animate style="transition-delay:450ms;">
-            <p class="interview-q">&ldquo;If you had the chance, would you return to ballet?&rdquo;</p>
-            <p class="interview-a">&ldquo;Yes, I would — but not professionally, because I chose a different career path: becoming a prosecutor.&rdquo;</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== SECTION 4 — MOODBOARD GALLERY ===== -->
-    <section class="section" id="moodboard">
-      <div class="container">
-        <h2 class="section-heading mb-lg" data-gsap-reveal>
-          <span class="heading-line">MOOD</span>
-          <span class="heading-line heading-accent">BOARD</span>
-        </h2>
-
-        <div class="editorial-asymmetric">
-          <div class="media-container" data-animate="clip-h">
-            <img
-              src="https://17f7dyxcw8.ucarecd.net/5aa6b52f-2b91-45e8-9450-dc9337acc68d/BHSAD_24042026132296.webp"
-              alt="Interview and moodboard spread — The Beginning"
-              loading="lazy" decoding="async"
-              style="width:100%;aspect-ratio:3/4;object-fit:cover;"
-              data-lightbox="">
-          </div>
-
-          <!-- X-Ray image 1 -->
-          <div class="xray-container media-container" data-tilt data-animate="clip-h" style="transition-delay:80ms;aspect-ratio:3/4;">
-            <img class="xray-surface"
-              src="https://17f7dyxcw8.ucarecd.net/06dae236-ff8e-4fd9-a0e9-a88ca42b78ef/BHSAD_24042026132362.webp"
-              alt="Ballet performance — polished editorial shot">
-            <img class="xray-reality"
-              src="https://17f7dyxcw8.ucarecd.net/56ae1b01-c2cf-43b6-9aea-3a9aeef48783/right6.webp"
-              alt="Ballet rehearsal — raw training moment">
-            <span class="xray-label">THE DISCIPLINE</span>
-          </div>
-
-          <div class="media-container" data-animate="clip-h" style="transition-delay:160ms;">
-            <img
-              src="https://17f7dyxcw8.ucarecd.net/921a0bb2-521f-4909-ad26-61f256d1802d/BHSAD_24042026132396.webp"
-              alt="The Struggles — research spread"
-              loading="lazy" decoding="async"
-              style="width:100%;aspect-ratio:1/1;object-fit:cover;"
-              data-lightbox="">
-          </div>
-
-          <!-- X-Ray image 2 -->
-          <div class="xray-container media-container" data-tilt data-animate="clip-h" style="transition-delay:240ms;aspect-ratio:4/5;">
-            <img class="xray-surface"
-              src="https://17f7dyxcw8.ucarecd.net/7bd9a069-c68d-4dd3-b96b-957bda70fac6/BHSAD_24042026132177.webp"
-              alt="Dancer on stage — polished performance">
-            <img class="xray-reality"
-              src="https://17f7dyxcw8.ucarecd.net/521494f8-15bb-4d84-86af-644c18826068/right5.webp"
-              alt="Dancer backstage — bruised feet, exhaustion">
-            <span class="xray-label">THE REALITY</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== SECTION 5 — MATERIALS & TEXTILES ===== -->
-    <section class="section" id="materials">
-      <div class="container">
-        <h2 class="section-heading mb-lg" data-gsap-reveal>
-          <span class="heading-line">MATE</span>
-          <span class="heading-line heading-accent">RIALS</span>
-        </h2>
-
-        <div class="grid grid--4">
-          <!-- Tulle & Organza -->
-          <div class="material-panel" data-animate="scale" data-tilt data-bloom>
-            <img class="material-panel__image"
-              src="https://17f7dyxcw8.ucarecd.net/10e381a4-18df-491e-8321-27cf48270c80/right3.webp"
-              alt="Tulle and organza textile samples" loading="lazy" decoding="async"
-              data-lightbox="">
-            <div class="material-panel__label">
-              <span style="font-family:var(--font-sub);letter-spacing:0.15em;display:block;margin-bottom:0.25rem;">TULLE &amp; ORGANZA</span>
-              <span class="spec-label">Lightweight nylon — structured collar</span>
-            </div>
-          </div>
-
-          <!-- Hand-woven Textile -->
-          <div class="material-panel" data-animate="scale" data-tilt data-bloom style="transition-delay:100ms;">
-            <img class="material-panel__image"
-              src="https://17f7dyxcw8.ucarecd.net/96d85d66-290b-4ae7-8c19-290623cfdc4e/right2.webp"
-              alt="Hand-woven textile samples" loading="lazy" decoding="async"
-              data-lightbox="">
-            <div class="material-panel__label">
-              <span style="font-family:var(--font-sub);letter-spacing:0.15em;display:block;margin-bottom:0.25rem;">HAND-WOVEN TEXTILE</span>
-              <span class="spec-label">100% Nylon — lace appliqué with pearl</span>
-            </div>
-          </div>
-
-          <!-- Lace Samples -->
-          <div class="material-panel" data-animate="scale" data-tilt data-bloom style="transition-delay:200ms;">
-            <img class="material-panel__image"
-              src="https://17f7dyxcw8.ucarecd.net/6c5a2a46-bbde-414a-add7-4792184eb3aa/right.webp"
-              alt="Lace textile swatches" loading="lazy" decoding="async"
-              data-lightbox="">
-            <div class="material-panel__label">
-              <span style="font-family:var(--font-sub);letter-spacing:0.15em;display:block;margin-bottom:0.25rem;">LACE SAMPLES</span>
-              <span class="spec-label">75% Nylon — 145cm width</span>
-            </div>
-          </div>
-
-          <!-- Bioplastics & Metal -->
-          <div class="material-panel" data-animate="scale" data-tilt data-bloom style="transition-delay:300ms;">
-            <img class="material-panel__image"
-              src="https://17f7dyxcw8.ucarecd.net/390e9df6-0928-4341-9ea7-9113b7d35505/BHSAD_24042026131828.webp"
-              alt="Bioplastic and metal structural details" loading="lazy" decoding="async"
-              data-lightbox="">
-            <div class="material-panel__label">
-              <span style="font-family:var(--font-sub);letter-spacing:0.15em;display:block;margin-bottom:0.25rem;">BIOPLASTICS &amp; METAL</span>
-              <span class="spec-label">Gelatin-based experimental — aluminum sheet</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== SECTION 6 — CONCEPT TIMELINE (GSAP PINNED) ===== -->
-    <section class="timeline-section" id="timeline">
-      <div class="container">
-        <h2 class="section-heading mb-lg" data-gsap-reveal>
-          <span class="heading-line">TIME</span>
-          <span class="heading-line heading-accent">LINE</span>
-        </h2>
-      </div>
-
-      <!-- Desktop: GSAP horizontal pinned -->
-      <div class="timeline-panels" style="display:none;">
-        <!-- Panel 1 -->
-        <div class="timeline-panel">
-          <div class="container" style="max-width:800px;">
-            <span class="timeline-tag">BLOCK 1</span>
-            <h3 class="timeline-heading">&ldquo;Emotional Entry&rdquo;</h3>
-            <p class="timeline-desc">A strong desire to work hard and prove oneself. Joy — the feeling of becoming part of the ballet world. Nervousness, excitement, trembling anticipation.</p>
-            <div class="media-container mt-md" style="aspect-ratio:16/9;border-radius:var(--radius-md);overflow:hidden;">
-              <img src="https://17f7dyxcw8.ucarecd.net/39a4d18e-90ad-40eb-b218-ea3255287ec5/BHSAD_24042026132288.webp"
-                alt="The Beginning — moodboard spread" loading="lazy" decoding="async"
-                style="width:100%;height:100%;object-fit:cover;">
-            </div>
-          </div>
-        </div>
-        <!-- Panel 2 -->
-        <div class="timeline-panel">
-          <div class="container" style="max-width:800px;">
-            <span class="timeline-tag">BLOCK 2</span>
-            <h3 class="timeline-heading">&ldquo;The Struggles&rdquo;</h3>
-            <p class="timeline-desc">Insecurity — the need to prove worth to teachers. The pain of transition from one dance style to another.</p>
-            <div class="media-container mt-md" style="aspect-ratio:16/9;border-radius:var(--radius-md);overflow:hidden;">
-              <img src="https://17f7dyxcw8.ucarecd.net/dec5e489-43d1-48e3-9caa-45db85b87bfa/BHSAD_24042026131036.webp"
-                alt="The Struggles — research spread" loading="lazy" decoding="async"
-                style="width:100%;height:100%;object-fit:cover;">
-            </div>
-          </div>
-        </div>
-        <!-- Panel 3 -->
-        <div class="timeline-panel">
-          <div class="container" style="max-width:800px;">
-            <span class="timeline-tag">BLOCK 3 — MAIN FOCUS</span>
-            <h3 class="timeline-heading">&ldquo;The Dream&rdquo;</h3>
-            <p class="timeline-desc">The entry into a new world where joy intertwines with uncertainty. Ballet as emotional release — finding strength through discipline. Total dedication: 99 out of 100.</p>
-            <div class="media-container mt-md" style="aspect-ratio:16/9;border-radius:var(--radius-md);overflow:hidden;">
-              <img src="https://17f7dyxcw8.ucarecd.net/9f6e2d70-4550-442f-9b95-23435560a44b/BHSAD_24042026130776.webp"
-                alt="The Dream — ballet performance photography" loading="lazy" decoding="async"
-                style="width:100%;height:100%;object-fit:cover;">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mobile: Vertical timeline -->
-      <div class="container timeline-mobile">
-        <div class="timeline-vertical">
-          <div class="timeline-node" data-animate="timeline">
-            <span class="timeline-tag">BLOCK 1</span>
-            <h3 class="timeline-heading">&ldquo;Emotional Entry&rdquo;</h3>
-            <p class="timeline-desc">A strong desire to work hard and prove oneself. Joy — the feeling of becoming part of the ballet world. Nervousness, excitement, trembling anticipation.</p>
-          </div>
-          <div class="timeline-node" data-animate="timeline" style="transition-delay:200ms;">
-            <span class="timeline-tag">BLOCK 2</span>
-            <h3 class="timeline-heading">&ldquo;The Struggles&rdquo;</h3>
-            <p class="timeline-desc">Insecurity — the need to prove worth to teachers. The pain of transition from one dance style to another.</p>
-          </div>
-          <div class="timeline-node" data-animate="timeline" style="transition-delay:400ms;">
-            <span class="timeline-tag">BLOCK 3 — MAIN FOCUS</span>
-            <h3 class="timeline-heading">&ldquo;The Dream&rdquo;</h3>
-            <p class="timeline-desc">The entry into a new world where joy intertwines with uncertainty. Ballet as emotional release — finding strength through discipline. Total dedication: 99 out of 100.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Timeline responsive toggle -->
-    <style>
-      @media (min-width: 768px) {
-        .timeline-panels { display: flex !important; }
-        .timeline-mobile { display: none; }
-      }
-    </style>
-
-    <!-- ===== SECTION 7 — SKETCHES & DESIGN COLLAGES ===== -->
-    <section class="section" id="sketches">
-      <div class="container">
-        <h2 class="section-heading mb-lg" data-gsap-reveal>
-          <span class="heading-line">SKET</span>
-          <span class="heading-line heading-accent">CHES</span>
-        </h2>
-
-        <div class="editorial-asymmetric">
-          <div class="media-container" data-animate="clip-h">
-            <img
-              src="https://17f7dyxcw8.ucarecd.net/457d1abb-18c4-47ff-a725-91b1df9f751f/11.webp"
-              alt="Design sketches — silhouette explorations"
-              loading="lazy" decoding="async"
-              style="width:100%;aspect-ratio:3/4;object-fit:cover;"
-              data-lightbox="">
-          </div>
-          <div class="media-container" data-animate="clip-h" style="transition-delay:200ms;">
-            <img
-              src="https://17f7dyxcw8.ucarecd.net/95458ed2-50fc-46d2-b018-bd06109e7776/6.webp"
-              alt="Design collages — material and form studies"
-              loading="lazy" decoding="async"
-              style="width:100%;aspect-ratio:1/1;object-fit:cover;"
-              data-lightbox="">
-          </div>
-          <div class="media-container" data-animate="clip-h" style="transition-delay:400ms;">
-            <img
-              src="https://17f7dyxcw8.ucarecd.net/e9e33f0e-a18b-4c68-bb66-48c68352612f/13.webp"
-              alt="Illustration detail — garment construction"
-              loading="lazy" decoding="async"
-              style="width:100%;aspect-ratio:4/5;object-fit:cover;"
-              data-lightbox="">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== SECTION 8 — SILHOUETTE & CUT DEVELOPMENT ===== -->
-    <section class="section" id="silhouette">
-      <div class="container">
-        <h2 class="section-heading mb-lg" data-gsap-reveal>
-          <span class="heading-line">SILHOU</span>
-          <span class="heading-line heading-accent">ETTE</span>
-        </h2>
-
-        <div class="three-panel">
-          <div class="media-container" data-animate="clip-v">
-            <img
-              src="https://17f7dyxcw8.ucarecd.net/a828469d-4841-4a73-bf5d-023b5e3df7e0/14.webp"
-              alt="Silhouette sketch — structural design"
-              loading="lazy" decoding="async"
-              style="width:100%;aspect-ratio:3/4;object-fit:cover;"
-              data-lightbox="">
-          </div>
-          <div class="media-container" data-animate="clip-v" style="transition-delay:100ms;">
-            <img
-              src="https://17f7dyxcw8.ucarecd.net/662efd1d-9f38-4f30-9b54-2b25469194d1/BHSAD_24042026130659.webp"
-              alt="Metal skirt prototype on mannequin — front and back views"
-              loading="lazy" decoding="async"
-              style="width:100%;aspect-ratio:3/4;object-fit:cover;"
-              data-lightbox="">
-          </div>
-          <div class="media-container" data-animate="clip-v" style="transition-delay:200ms;">
-            <img
-              src="https://17f7dyxcw8.ucarecd.net/dec5e489-43d1-48e3-9caa-45db85b87bfa/BHSAD_24042026131036.webp"
-              alt="Designer wearing the metal skirt prototype"
-              loading="lazy" decoding="async"
-              style="width:100%;aspect-ratio:3/4;object-fit:cover;"
-              data-lightbox="">
-          </div>
-        </div>
-
-        <blockquote class="pull-quote text-center mt-lg" data-animate style="max-width:800px;margin-left:auto;margin-right:auto;">
-          <em>&ldquo;Structural inserts, corset-like frameworks, and modular components disrupt traditional silhouettes, introducing a contemporary interpretation of control and constraint.&rdquo;</em>
-        </blockquote>
-      </div>
-    </section>
-
-    <!-- ===== SECTION 9 — KEY RESEARCH QUOTE ===== -->
-    <section class="manifesto-section" id="research-quote">
-      <p class="manifesto-text" data-illuminate>
-        <span class="word">The</span> <span class="word">dancer's</span>
-        <span class="word">body</span> <span class="word">is</span>
-        <span class="word">continually</span> <span class="word">corrected,</span>
-        <span class="word">measured,</span> <span class="word">and</span>
-        <span class="word">refined</span> <span class="word">until</span>
-        <span class="word">discipline</span> <span class="word">becomes</span>
-        <span class="word">internalized</span> <span class="word">and</span>
-        <span class="word">movement</span> <span class="word">appears</span>
-        <span class="word">effortless.</span>
-      </p>
-      <p class="manifesto-attribution" data-animate>
-        — Whispers of Strength: Ballet and the Disciplined Body, Lina Nguen, 2025
-      </p>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-watermark" aria-hidden="true">WHISPER OF MOTION</div>
-      <div class="footer-signature">
-        <svg viewBox="0 0 120 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M 12 8 L 12 38 Q 12 40 14 40 L 32 40 M 62 38 L 62 8 L 90 38 L 90 8"/><circle cx="48" cy="24" r="2" fill="currentColor" stroke="none"/>
-        </svg>
-      </div>
-      <div class="footer-contact" data-animate="footer">
-        <a href="linanguen61@gmail.com" class="footer-link" data-bloom>linanguen61@gmail.com</a>
-        <a href="https://www.instagram.com/oohlingg_?igsh=dzk5c3o1bGo2cThj" class="footer-link" data-bloom>@oohlingg_</a>
-        <a href="+7(977)549-76-89" class="footer-link" data-bloom target="_blank" rel="noopener">+7(977)549-76-89</a>
-      </div>
-      <hr class="footer-divider">
-      <p class="footer-copyright">&copy; 2025 Whisper of Motion. Lina Nguen. All rights reserved.</p>
-    </footer>
-
+  <!-- Mobile Nav Overlay -->
+  <div class="pnav-overlay" aria-hidden="true">
+    <a href="index.html">Home</a>
+    <a href="index.html#concept">Concept</a>
+    <a href="process.html">Process</a>
+    <a href="collection.html">Collection</a>
   </div>
 
-  <!-- Mobile pill nav -->
-  <nav class="mobile-nav-pill liquid-glass" aria-label="Mobile navigation">
-    <a href="index.html" class="pill-link" data-bloom>Home</a>
-    <span class="pill-divider" aria-hidden="true">&middot;</span>
-    <a href="process.html" class="pill-link active" data-bloom>Process</a>
-    <span class="pill-divider" aria-hidden="true">&middot;</span>
-    <a href="collection.html" class="pill-link" data-bloom>Collection</a>
-  </nav>
 
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="/js/init.js"></script>
-  <script src="/js/animations.js"></script>
-  <script src="/js/transitions.js"></script>
-  <script src="/js/cursor.js"></script>
-  <script src="/js/media-loader.js"></script>
-  <script src="/js/lightbox.js"></script>
-  <script src="/js/marquee.js"></script>
-  <script src="/js/tilt.js"></script>
-  <script src="/js/scroll-text.js"></script>
-  <script src="/js/xray.js"></script>
-  <script src="/js/gsap-init.js"></script>
-  <noscript><style>.loading-screen{display:none!important}[data-animate]{opacity:1!important;transform:none!important}</style></noscript>
+  <!-- ══════════════════════════════════════════ -->
+  <!--  PAGE HEADER                                -->
+  <!-- ══════════════════════════════════════════ -->
+  <header class="pheader">
+    <div class="pcontainer">
+      <span class="plabel">Design Development</span>
+      <h1>Process</h1>
+      <p class="pheader__sub">Whisper of Motion</p>
+    </div>
+  </header>
+
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  INTRODUCTION                               -->
+  <!-- ══════════════════════════════════════════ -->
+  <section class="psection" id="intro">
+    <div class="pcontainer">
+      <div class="pintro">
+        <p class="pintro__text">This section presents my design process, documenting the development of my project from initial material exploration to the final outcome. It shows how I worked with metal and tweed, transforming tweed into a large constructed textile surface and developing the metal elements into finished details.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  1. TWEED                                   -->
+  <!-- ══════════════════════════════════════════ -->
+  <section class="psection psection--alt" id="tweed">
+    <div class="pcontainer">
+      <div class="psection__header">
+        <span class="plabel">01</span>
+        <h2>Tweed</h2>
+      </div>
+
+      <div class="psplit">
+        <div class="psplit__media">
+          <img
+            data-src="https://17f7dyxcw8.ucarecd.net/110970b2-5e17-4f8c-b15b-a7ed99eb3ce3/tweed.webp"
+            alt="Hand-woven tweed construction process"
+            loading="lazy" decoding="async" data-lightbox>
+        </div>
+        <div class="psplit__body">
+          <p>This section presents my design process, documenting the development of my project from initial material exploration to the final outcome. It shows how I worked with metal and tweed, transforming tweed into a large constructed textile surface and developing the metal elements into finished details.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  2. METAL DRESS                             -->
+  <!-- ══════════════════════════════════════════ -->
+  <section class="psection" id="metal-dress">
+    <div class="pcontainer">
+      <div class="psection__header">
+        <span class="plabel">02</span>
+        <h2>Metal Dress</h2>
+      </div>
+
+      <div class="psplit psplit--reverse">
+        <div class="psplit__media">
+          <img
+            data-src="https://17f7dyxcw8.ucarecd.net/49efa35e-eb60-4828-80d3-da4e7df0af16/metal1.webp"
+            alt="Metal dress construction — metallic ring connections"
+            loading="lazy" decoding="async" data-lightbox>
+        </div>
+        <div class="psplit__body">
+          <p>This section presents my design process, documenting the development of my project from initial material exploration to the final outcome. It shows how I worked with metal and tweed, transforming tweed into a large constructed textile surface and developing the metal elements into finished details.</p>
+        </div>
+      </div>
+
+      <div class="pgrid pgrid--2" style="margin-top: 1.5rem;">
+        <img
+          data-src="https://17f7dyxcw8.ucarecd.net/43cf4508-6520-47c4-8c17-f88c73136659/metal2.webp"
+          alt="Metal dress detail — ring assembly"
+          loading="lazy" decoding="async" data-lightbox>
+        <img
+          data-src="https://17f7dyxcw8.ucarecd.net/d14bded4-1a5e-48c3-a9ee-ae099e2e035d/metal3.webp"
+          alt="Metal dress detail — finished surface"
+          loading="lazy" decoding="async" data-lightbox>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  3. CORSET                                  -->
+  <!-- ══════════════════════════════════════════ -->
+  <section class="psection psection--alt" id="corset">
+    <div class="pcontainer">
+      <div class="psection__header">
+        <span class="plabel">03</span>
+        <h2>Corset</h2>
+      </div>
+
+      <div class="psplit">
+        <div class="psplit__media">
+          <img
+            data-src="https://17f7dyxcw8.ucarecd.net/5a7b2dc6-6d84-4302-bd10-d89815fcd5e4/corset1.webp"
+            alt="Metal corset with tulle ruffles — construction"
+            loading="lazy" decoding="async" data-lightbox>
+        </div>
+        <div class="psplit__body">
+          <p>This section presents my design process, documenting the development of my project from initial material exploration to the final outcome. It shows how I worked with metal and tweed, transforming tweed into a large constructed textile surface and developing the metal elements into finished details.</p>
+        </div>
+      </div>
+
+      <div class="pgrid pgrid--3" style="margin-top: 1.5rem;">
+        <img
+          data-src="https://17f7dyxcw8.ucarecd.net/f01f223c-1245-4a9f-97f0-28262cec170c/corset2.webp"
+          alt="Corset detail — tulle and organza layers"
+          loading="lazy" decoding="async" data-lightbox>
+        <img
+          data-src="https://17f7dyxcw8.ucarecd.net/04cc4d32-ecb1-4439-9b5d-71363863bb98/corset3.webp"
+          alt="Corset detail — lace and metal closure"
+          loading="lazy" decoding="async" data-lightbox>
+        <img
+          data-src="https://17f7dyxcw8.ucarecd.net/45a8c340-9422-4566-997d-0be1b6af6661/corset4.webp"
+          alt="Corset detail — hand-woven textile"
+          loading="lazy" decoding="async" data-lightbox>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  4. METAL TOP AND SKIRT                     -->
+  <!-- ══════════════════════════════════════════ -->
+  <section class="psection" id="metal-top-skirt">
+    <div class="pcontainer">
+      <div class="psection__header">
+        <span class="plabel">04</span>
+        <h2>Metal Top and Skirt</h2>
+      </div>
+
+      <div class="psplit psplit--reverse">
+        <div class="psplit__media">
+          <img
+            data-src="https://17f7dyxcw8.ucarecd.net/87783374-606b-4587-82e9-d72f7e5d95ae/metaltop1.webp"
+            alt="Metal top and skirt — finished hardware details"
+            loading="lazy" decoding="async" data-lightbox>
+        </div>
+        <div class="psplit__body">
+          <p>This section presents my design process, documenting the development of my project from initial material exploration to the final outcome. It shows how I worked with metal and tweed, transforming tweed into a large constructed textile surface and developing the metal elements into finished details.</p>
+        </div>
+      </div>
+
+      <div class="pgrid pgrid--2" style="margin-top: 1.5rem;">
+        <img
+          data-src="https://17f7dyxcw8.ucarecd.net/5eaaada6-80b7-472f-92cc-63f29248297c/metaltop2.webp"
+          alt="Metal top — construction close-up"
+          loading="lazy" decoding="async" data-lightbox>
+        <img
+          data-src="https://17f7dyxcw8.ucarecd.net/c674445b-0ff6-42d3-b28e-885a87a789ef/metaltop3.webp"
+          alt="Metal skirt — ring connections"
+          loading="lazy" decoding="async" data-lightbox>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  5. RANGE PLAN                              -->
+  <!-- ══════════════════════════════════════════ -->
+  <section class="psection psection--alt" id="range-plan">
+    <div class="pcontainer">
+      <div class="psection__header">
+        <span class="plabel">05</span>
+        <h2>Range Plan</h2>
+      </div>
+
+      <!-- Sketches row -->
+      <div class="pgrid pgrid--3" style="margin-bottom: 2rem;">
+        <img
+          data-src="https://17f7dyxcw8.ucarecd.net/80a3c05b-c160-47fe-9117-27cc1b6af320/rangeplan1.webp"
+          alt="Range plan — design sketch 1"
+          loading="lazy" decoding="async" data-lightbox>
+        <img
+          data-src="https://17f7dyxcw8.ucarecd.net/ac9694f2-6547-499f-b319-3b40d5e7d313/rangeplan2.webp"
+          alt="Range plan — material study"
+          loading="lazy" decoding="async" data-lightbox>
+      </div>
+
+      <!-- 6 Looks Grid -->
+      <h3 class="prange__subtitle">The Six Looks</h3>
+      <div class="pgrid pgrid--6looks">
+        <div class="plook-thumb">
+          <img
+            data-src="https://17f7dyxcw8.ucarecd.net/37adb3b7-5733-4c80-a16d-b8e4321b2daf/technical1.webp"
+            alt="Look 1" loading="lazy" decoding="async" data-lightbox>
+          <span class="plook-thumb__label">Look 1</span>
+        </div>
+        <div class="plook-thumb">
+          <img
+            data-src="https://17f7dyxcw8.ucarecd.net/3e3227f3-ad35-4a6e-9fda-7d726a6ec3d0/technical2.webp"
+            alt="Look 2" loading="lazy" decoding="async" data-lightbox>
+          <span class="plook-thumb__label">Look 2</span>
+        </div>
+        <div class="plook-thumb">
+          <img
+            data-src="https://17f7dyxcw8.ucarecd.net/c55ff8aa-0d4a-4364-acbb-f61bfb605bca/technical3.webp"
+            alt="Look 3" loading="lazy" decoding="async" data-lightbox>
+          <span class="plook-thumb__label">Look 3</span>
+        </div>
+        <div class="plook-thumb">
+          <img
+            data-src="https://17f7dyxcw8.ucarecd.net/f2f4a710-dc4a-4176-bc4d-e12aad95721a/technical4.webp"
+            alt="Look 4" loading="lazy" decoding="async" data-lightbox>
+          <span class="plook-thumb__label">Look 4</span>
+        </div>
+        <div class="plook-thumb">
+          <img
+            data-src="https://17f7dyxcw8.ucarecd.net/ec900674-32b9-40d1-80ba-e20121f63110/technical5.webp"
+            alt="Look 5" loading="lazy" decoding="async" data-lightbox>
+          <span class="plook-thumb__label">Look 5</span>
+        </div>
+        <div class="plook-thumb">
+          <img
+            data-src="https://17f7dyxcw8.ucarecd.net/b3d83ddb-fd0d-493d-92ef-70a7177ba002/technical6.webp"
+            alt="Look 6" loading="lazy" decoding="async" data-lightbox>
+          <span class="plook-thumb__label">Look 6</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--  BACK TO HOME                               -->
+  <!-- ══════════════════════════════════════════ -->
+  <section class="psection psection--cta">
+    <div class="pcontainer" style="text-align:center;">
+      <a href="index.html" class="pbtn">&larr; Back to Home</a>
+      <a href="collection.html" class="pbtn">View Collection &rarr;</a>
+    </div>
+  </section>
+
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="pfooter">
+    <div class="pcontainer">
+      <p class="pfooter__brand">Whisper of Motion</p>
+      <p class="pfooter__tagline">Strength that has learned to speak quietly.</p>
+      <div class="pfooter__links">
+        <a href="mailto:linanguen61@gmail.com">linanguen61@gmail.com</a>
+        <a href="https://www.instagram.com/oohlingg_?igsh=dzk5c3o1bGo2cThj" target="_blank" rel="noopener">@oohlingg_</a>
+        <a href="tel:+79775497689">+7 (977) 549-76-89</a>
+      </div>
+      <p class="pfooter__copy">&copy; 2026 Lina Nguen. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+  <!-- Lightbox -->
+  <div class="plightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+    <button class="plightbox__close" aria-label="Close">&times;</button>
+    <button class="plightbox__nav plightbox__nav--prev" aria-label="Previous">&#8592;</button>
+    <img class="plightbox__image" src="" alt="">
+    <button class="plightbox__nav plightbox__nav--next" aria-label="Next">&#8594;</button>
+  </div>
+
+  <script src="js/process.js"></script>
 </body>
 </html>
