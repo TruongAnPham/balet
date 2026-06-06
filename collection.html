@@ -16,55 +16,120 @@
   <link rel="stylesheet" href="styles/variables.css">
   <link rel="stylesheet" href="styles/collection.css">
   <style>
-    /* Additional styles for 7-image creative gallery */
-    .creative-gallery {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
-      margin: 60px 0 40px;
+    /* ── 10-Image Masonry Gallery ── */
+    .gallery-ornament {
+      text-align: center;
+      margin: 40px 0 16px;
+      position: relative;
     }
+    .gallery-ornament::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--color-accent, #CFA6A8), transparent);
+      opacity: 0.35;
+    }
+    .gallery-ornament span {
+      position: relative;
+      display: inline-block;
+      background: var(--color-bg, #FAFAF9);
+      padding: 0 20px;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 15px;
+      color: var(--color-accent, #CFA6A8);
+      letter-spacing: 0.08em;
+    }
+    @media (min-width: 768px) {
+      .gallery-ornament span { font-size: 17px; }
+      .gallery-ornament { margin: 52px 0 20px; }
+    }
+
+    .creative-gallery {
+      columns: 1;
+      column-gap: 20px;
+      margin: 24px 0 40px;
+      position: relative;
+    }
+
+    /* Decorative dots */
+    .creative-gallery::before,
+    .creative-gallery::after {
+      display: none;
+    }
+    @media (min-width: 1024px) {
+      .creative-gallery::before,
+      .creative-gallery::after {
+        content: '·  ·  ·';
+        display: block;
+        position: absolute;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 18px;
+        letter-spacing: 0.3em;
+        color: var(--color-accent, #CFA6A8);
+        opacity: 0.3;
+        pointer-events: none;
+      }
+      .creative-gallery::before {
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .creative-gallery::after {
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
     .gallery-item {
       position: relative;
       overflow: hidden;
-      background: #f0f0f0;
-      border-radius: 20px;
+      background: var(--color-surface, #F3EFEC);
+      border-radius: 14px;
       cursor: pointer;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      margin-bottom: 20px;
+      break-inside: avoid;
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+                  box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
     }
     .gallery-item:hover {
-      transform: scale(1.02);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+      transform: translateY(-4px) scale(1.015);
+      box-shadow: 0 16px 40px rgba(167, 155, 168, 0.18),
+                  0 4px 12px rgba(0,0,0,0.06);
     }
+
     .gallery-img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: auto;
       display: block;
       pointer-events: none;
+      transition: filter 0.4s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
     }
+    .gallery-item:hover .gallery-img {
+      filter: brightness(1.04) contrast(1.02);
+      transform: scale(1.03);
+    }
+
     .gallery-caption {
-      padding: 14px 0 8px;
-      font-size: 13px;
-      color: #888;
+      padding: 14px 16px 12px;
+      font-size: 12.5px;
+      color: var(--color-text-secondary, #6B6368);
       text-align: center;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.05em;
       font-family: 'DM Sans', sans-serif;
+      text-transform: uppercase;
     }
-    /* Aspect ratios for creative variety */
-    .item-1 { aspect-ratio: 1 / 1; }
-    .item-2 { aspect-ratio: 3 / 4; }
-    .item-3 { aspect-ratio: 1 / 1; }
-    .item-4 { aspect-ratio: 16 / 9; }
-    .item-5 { aspect-ratio: 2 / 3; }
-    .item-6 { aspect-ratio: 1 / 1; }
-    .item-7 { aspect-ratio: 4 / 3; }
-    
+
     /* Placeholder style */
     .placeholder-img {
       width: 100%;
-      height: 100%;
-      min-height: 200px;
-      background: linear-gradient(135deg, #e8e8e8 0%, #f5f5f5 100%);
+      min-height: 220px;
+      background: linear-gradient(135deg, #e8e8e8 0%, #f5f5f5 50%, #ede9e6 100%);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -75,20 +140,85 @@
       flex-direction: column;
       gap: 8px;
     }
-    
+
+    /* Hover overlay indicator */
+    .gallery-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 60%, rgba(46,46,50,0.08) 100%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+      border-radius: 14px;
+    }
+    .gallery-item:hover::after {
+      opacity: 1;
+    }
+
     @media (min-width: 768px) {
       .creative-gallery {
-        grid-template-columns: repeat(4, 1fr);
-        grid-auto-rows: auto;
-        gap: 24px;
+        columns: 2;
+        column-gap: 24px;
+        margin: 32px 0 48px;
       }
-      .item-1 { grid-column: span 2; grid-row: span 2; }
-      .item-2 { grid-column: span 1; grid-row: span 1; }
-      .item-3 { grid-column: span 1; grid-row: span 1; }
-      .item-4 { grid-column: span 3; grid-row: span 1; }
-      .item-5 { grid-column: span 1; grid-row: span 2; }
-      .item-6 { grid-column: span 1; grid-row: span 1; }
-      .item-7 { grid-column: span 2; grid-row: span 1; }
+      .gallery-item {
+        margin-bottom: 24px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .creative-gallery {
+        columns: 3;
+        column-gap: 28px;
+        margin: 40px 0 56px;
+      }
+      .gallery-item {
+        margin-bottom: 28px;
+        border-radius: 16px;
+      }
+      .gallery-item::after {
+        border-radius: 16px;
+      }
+    }
+
+    /* ── Image counter badge ── */
+    .gallery-item .gallery-index {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      color: var(--color-text, #2E2E32);
+      opacity: 0;
+      transform: scale(0.8);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .gallery-item:hover .gallery-index {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* ── Gallery bottom ornament ── */
+    .gallery-end-ornament {
+      text-align: center;
+      padding: 24px 0 8px;
+      opacity: 0.3;
+    }
+    .gallery-end-ornament svg {
+      width: 60px;
+      height: 20px;
     }
   </style>
 </head>
@@ -129,14 +259,20 @@
 
 
   <!-- ══════════════════════════════════════════ -->
-  <!--  7 IMAGES CREATIVE GALLERY (thay thế 6 looks) -->
+  <!--  10 IMAGES MASONRY GALLERY                  -->
   <!-- ══════════════════════════════════════════ -->
   <section class="csection">
     <div class="ccontainer">
 
+      <!-- Decorative separator -->
+      <div class="gallery-ornament">
+        <span>10 Pieces</span>
+      </div>
+
       <div class="creative-gallery">
-        <!-- ẢNH 1 - lớn, vuông -->
-        <div class="gallery-item item-1" data-img="https://17f7dyxcw8.ucarecd.net/662efd1d-9f38-4f30-9b54-2b25469194d1/BHSAD_24042026130659.webp">
+        <!-- ẢNH 1 -->
+        <div class="gallery-item" data-img="https://17f7dyxcw8.ucarecd.net/662efd1d-9f38-4f30-9b54-2b25469194d1/BHSAD_24042026130659.webp">
+          <span class="gallery-index">01</span>
           <img class="gallery-img" 
                src="https://17f7dyxcw8.ucarecd.net/662efd1d-9f38-4f30-9b54-2b25469194d1/BHSAD_24042026130659.webp" 
                alt="Final collection - overview 1" 
@@ -145,8 +281,9 @@
           <div class="gallery-caption">Tổng thể collection</div>
         </div>
         
-        <!-- ẢNH 2 - dọc -->
-        <div class="gallery-item item-2" data-img="https://17f7dyxcw8.ucarecd.net/28c9032c-ea66-4098-b725-893204bbc40f/BHSAD_24042026130726.webp">
+        <!-- ẢNH 2 -->
+        <div class="gallery-item" data-img="https://17f7dyxcw8.ucarecd.net/28c9032c-ea66-4098-b725-893204bbc40f/BHSAD_24042026130726.webp">
+          <span class="gallery-index">02</span>
           <img class="gallery-img" 
                src="https://17f7dyxcw8.ucarecd.net/28c9032c-ea66-4098-b725-893204bbc40f/BHSAD_24042026130726.webp" 
                alt="Metal corset detail" 
@@ -155,8 +292,9 @@
           <div class="gallery-caption">Metal Corset</div>
         </div>
         
-        <!-- ẢNH 3 - vuông -->
-        <div class="gallery-item item-3" data-img="https://17f7dyxcw8.ucarecd.net/8a52774d-b1b0-4466-9263-d07af57aa083/BHSAD_24042026131538.webp">
+        <!-- ẢNH 3 -->
+        <div class="gallery-item" data-img="https://17f7dyxcw8.ucarecd.net/8a52774d-b1b0-4466-9263-d07af57aa083/BHSAD_24042026131538.webp">
+          <span class="gallery-index">03</span>
           <img class="gallery-img" 
                src="https://17f7dyxcw8.ucarecd.net/8a52774d-b1b0-4466-9263-d07af57aa083/BHSAD_24042026131538.webp" 
                alt="Tweed jacket" 
@@ -165,8 +303,9 @@
           <div class="gallery-caption">Tweed Jacket</div>
         </div>
         
-        <!-- ẢNH 4 - ngang dài -->
-        <div class="gallery-item item-4" data-img="https://17f7dyxcw8.ucarecd.net/390e9df6-0928-4341-9ea7-9113b7d35505/BHSAD_24042026131828.webp">
+        <!-- ẢNH 4 -->
+        <div class="gallery-item" data-img="https://17f7dyxcw8.ucarecd.net/390e9df6-0928-4341-9ea7-9113b7d35505/BHSAD_24042026131828.webp">
+          <span class="gallery-index">04</span>
           <img class="gallery-img" 
                src="https://17f7dyxcw8.ucarecd.net/390e9df6-0928-4341-9ea7-9113b7d35505/BHSAD_24042026131828.webp" 
                alt="Tulle dress wide" 
@@ -175,18 +314,20 @@
           <div class="gallery-caption">Tulle Dress</div>
         </div>
         
-        <!-- ẢNH 5 - dọc cao -->
-        <div class="gallery-item item-5" data-img="https://17f7dyxcw8.ucarecd.net/06dae236-ff8e-4fd9-a0e9-a88ca42b78ef/BHSAD_24042026132362.webp">
+        <!-- ẢNH 5 -->
+        <div class="gallery-item" data-img="https://17f7dyxcw8.ucarecd.net/06dae236-ff8e-4fd9-a0e9-a88ca42b78ef/BHSAD_24042026132362.webp">
+          <span class="gallery-index">05</span>
           <img class="gallery-img" 
                src="https://17f7dyxcw8.ucarecd.net/06dae236-ff8e-4fd9-a0e9-a88ca42b78ef/BHSAD_24042026132362.webp" 
                alt="Metal top and skirt" 
                loading="lazy"
-               onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>📷 IMAGE 5<br>Metal Top & Skirt</div>'">
+               onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>📷 IMAGE 5<br>Metal Top &amp; Skirt</div>'">
           <div class="gallery-caption">Metal Top & Skirt</div>
         </div>
         
-        <!-- ẢNH 6 - vuông -->
-        <div class="gallery-item item-6" data-img="https://17f7dyxcw8.ucarecd.net/dec5e489-43d1-48e3-9caa-45db85b87bfa/BHSAD_24042026131036.webp">
+        <!-- ẢNH 6 -->
+        <div class="gallery-item" data-img="https://17f7dyxcw8.ucarecd.net/dec5e489-43d1-48e3-9caa-45db85b87bfa/BHSAD_24042026131036.webp">
+          <span class="gallery-index">06</span>
           <img class="gallery-img" 
                src="https://17f7dyxcw8.ucarecd.net/dec5e489-43d1-48e3-9caa-45db85b87bfa/BHSAD_24042026131036.webp" 
                alt="Metal detail closeup" 
@@ -195,8 +336,9 @@
           <div class="gallery-caption">Chi tiết kim loại</div>
         </div>
         
-        <!-- ẢNH 7 - ngang -->
-        <div class="gallery-item item-7" data-img="https://17f7dyxcw8.ucarecd.net/7bd9a069-c68d-4dd3-b96b-957bda70fac6/BHSAD_24042026132177.webp">
+        <!-- ẢNH 7 -->
+        <div class="gallery-item" data-img="https://17f7dyxcw8.ucarecd.net/7bd9a069-c68d-4dd3-b96b-957bda70fac6/BHSAD_24042026132177.webp">
+          <span class="gallery-index">07</span>
           <img class="gallery-img" 
                src="https://17f7dyxcw8.ucarecd.net/7bd9a069-c68d-4dd3-b96b-957bda70fac6/BHSAD_24042026132177.webp" 
                alt="Final collection runway style" 
@@ -204,6 +346,48 @@
                onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>📷 IMAGE 7<br>Runway Style</div>'">
           <div class="gallery-caption">Phong cách trình diễn</div>
         </div>
+
+        <!-- ẢNH 8 — NEW: Collection Overview -->
+        <div class="gallery-item" data-img="https://17f7dyxcw8.ucarecd.net/9fe573c9-9936-4f9f-b1eb-00da736d3cae/BHSAD_24042026131159.webp">
+          <span class="gallery-index">08</span>
+          <img class="gallery-img" 
+               src="https://17f7dyxcw8.ucarecd.net/9fe573c9-9936-4f9f-b1eb-00da736d3cae/BHSAD_24042026131159.webp" 
+               alt="Collection overview - full ensemble" 
+               loading="lazy"
+               onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>📷 IMAGE 8<br>Collection Overview</div>'">
+          <div class="gallery-caption">Collection Overview</div>
+        </div>
+
+        <!-- ẢNH 9 — NEW: Designer Portrait -->
+        <div class="gallery-item" data-img="https://17f7dyxcw8.ucarecd.net/85f1618e-65a2-4751-80c8-04119cb15840/photo_20260528_083417.jpg">
+          <span class="gallery-index">09</span>
+          <img class="gallery-img" 
+               src="https://17f7dyxcw8.ucarecd.net/85f1618e-65a2-4751-80c8-04119cb15840/photo_20260528_083417.jpg" 
+               alt="Lina Nguen - designer behind the collection" 
+               loading="lazy"
+               onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>📷 IMAGE 9<br>Behind the Collection</div>'">
+          <div class="gallery-caption">Behind the Collection</div>
+        </div>
+
+        <!-- ẢNH 10 — NEW: Corset Construction -->
+        <div class="gallery-item" data-img="https://17f7dyxcw8.ucarecd.net/5a7b2dc6-6d84-4302-bd10-d89815fcd5e4/corset1.webp">
+          <span class="gallery-index">10</span>
+          <img class="gallery-img" 
+               src="https://17f7dyxcw8.ucarecd.net/5a7b2dc6-6d84-4302-bd10-d89815fcd5e4/corset1.webp" 
+               alt="Metal corset with tulle ruffles - construction detail" 
+               loading="lazy"
+               onerror="this.onerror=null; this.parentElement.innerHTML='<div class=placeholder-img>📷 IMAGE 10<br>Corset Construction</div>'">
+          <div class="gallery-caption">Corset Construction</div>
+        </div>
+      </div>
+
+      <!-- End ornament -->
+      <div class="gallery-end-ornament">
+        <svg viewBox="0 0 60 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="0" y1="10" x2="22" y2="10" stroke="currentColor" stroke-width="0.5" style="color: var(--color-accent, #CFA6A8)"/>
+          <circle cx="30" cy="10" r="3" stroke="currentColor" stroke-width="0.5" fill="none" style="color: var(--color-accent, #CFA6A8)"/>
+          <line x1="38" y1="10" x2="60" y2="10" stroke="currentColor" stroke-width="0.5" style="color: var(--color-accent, #CFA6A8)"/>
+        </svg>
       </div>
     </div>
   </section>
@@ -241,23 +425,24 @@
     <button class="clightbox__nav clightbox__nav--prev" aria-label="Previous">&#8592;</button>
     <img class="clightbox__image" src="" alt="">
     <button class="clightbox__nav clightbox__nav--next" aria-label="Next">&#8594;</button>
+    <div class="clightbox__counter"></div>
   </div>
 
   <script src="js/collection.js"></script>
   
   <script>
-    // Modal/Lightbox integration for gallery items (since the existing lightbox might not cover new images)
+    // Modal/Lightbox integration for 10-image gallery
     (function() {
       const lightbox = document.querySelector('.clightbox');
       const lightboxImg = lightbox ? lightbox.querySelector('.clightbox__image') : null;
       const closeBtn = lightbox ? lightbox.querySelector('.clightbox__close') : null;
       const prevBtn = lightbox ? lightbox.querySelector('.clightbox__nav--prev') : null;
       const nextBtn = lightbox ? lightbox.querySelector('.clightbox__nav--next') : null;
+      const counter = lightbox ? lightbox.querySelector('.clightbox__counter') : null;
       
       let currentImages = [];
       let currentIndex = 0;
       
-      // Get all gallery images that have data-lightbox or use our gallery
       function initGalleryLightbox() {
         const galleryItems = document.querySelectorAll('.gallery-item');
         if (!lightbox || !lightboxImg) return;
@@ -267,7 +452,6 @@
           const imgElement = item.querySelector('.gallery-img');
           if (imgElement && imgElement.src && !imgElement.src.includes('placeholder')) {
             currentImages.push(imgElement.src);
-            // Add click handler
             item.style.cursor = 'pointer';
             item.addEventListener('click', (e) => {
               e.stopPropagation();
@@ -277,34 +461,30 @@
           }
         });
         
-        // Close lightbox
         if (closeBtn) {
           closeBtn.addEventListener('click', closeLightbox);
         }
         
-        // Previous image
         if (prevBtn) {
           prevBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             if (currentImages.length > 0) {
               currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
-              lightboxImg.src = currentImages[currentIndex];
+              showImage();
             }
           });
         }
         
-        // Next image
         if (nextBtn) {
           nextBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             if (currentImages.length > 0) {
               currentIndex = (currentIndex + 1) % currentImages.length;
-              lightboxImg.src = currentImages[currentIndex];
+              showImage();
             }
           });
         }
         
-        // Click outside to close
         if (lightbox) {
           lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) {
@@ -313,7 +493,6 @@
           });
         }
         
-        // ESC key
         document.addEventListener('keydown', (e) => {
           if (e.key === 'Escape' && lightbox.classList.contains('active')) {
             closeLightbox();
@@ -323,10 +502,34 @@
             if (nextBtn) nextBtn.click();
           }
         });
+
+        // Touch swipe support
+        let touchStartX = 0;
+        lightbox.addEventListener('touchstart', (e) => {
+          touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        lightbox.addEventListener('touchend', (e) => {
+          const delta = e.changedTouches[0].screenX - touchStartX;
+          if (Math.abs(delta) > 50) {
+            if (delta > 0) {
+              currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+            } else {
+              currentIndex = (currentIndex + 1) % currentImages.length;
+            }
+            showImage();
+          }
+        }, { passive: true });
+      }
+
+      function showImage() {
+        if (lightboxImg) lightboxImg.src = currentImages[currentIndex];
+        if (counter) counter.textContent = (currentIndex + 1) + ' / ' + currentImages.length;
       }
       
       function openLightbox(src) {
         if (lightboxImg) lightboxImg.src = src;
+        if (counter) counter.textContent = (currentIndex + 1) + ' / ' + currentImages.length;
         if (lightbox) lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
       }
@@ -336,7 +539,6 @@
         document.body.style.overflow = '';
       }
       
-      // Wait for DOM
       if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initGalleryLightbox);
       } else {
